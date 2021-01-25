@@ -18,7 +18,7 @@
   <a href="https://drive.google.com/drive/folders/10Anwy5IvE_B7G__Pnw48i7pDfwT7Q_nL?usp=sharing">
     <img src="https://i.ibb.co/xYwb0mh/Webp-net-resizeimage-3.png">
   </a>
-</p
+</p>
 
 
 <p align="center">
