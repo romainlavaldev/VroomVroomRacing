@@ -20,9 +20,10 @@
   </a>
 </p>
 
+<br>
 
 <p align="center">
-  aze
+  Le thème principal est déjà disponible !
 </p>
 
 <p align="center">
