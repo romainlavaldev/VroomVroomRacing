@@ -1,8 +1,6 @@
 # VroomVroomRacing
 
 <p align="center">
-  <b>Un jeu INCROYABLE par Nathan, Louis et Romain</b><br>
-  <br><br>
   <img src="https://i.ibb.co/1r7JfZM/Webp-net-resizeimage-4.png">
 </p>
 
