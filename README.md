@@ -9,16 +9,20 @@
 <br>
 
 <p class="has-line-data" data-line-start="2" data-line-end="3" align="center">
-  <a href="https://docs.google.com/spreadsheets/d/1SvyG32Zh5UfzfWa5EMwF4WwHUczXZSSaFWhVI2iOpkk/edit?usp=sharing" target="_blank">
+  <a href="https://docs.google.com/spreadsheets/d/1SvyG32Zh5UfzfWa5EMwF4WwHUczXZSSaFWhVI2iOpkk/edit?usp=sharing">
     <img src="https://i.ibb.co/zGWbm0R/Webp-net-resizeimage-2.png">
   </a>
 </p>
 
 <p class="has-line-data" data-line-start="2" data-line-end="3" align="center">
-  <a href="https://drive.google.com/drive/folders/10Anwy5IvE_B7G__Pnw48i7pDfwT7Q_nL?usp=sharing" target="_blank">
+  <a href="https://drive.google.com/drive/folders/10Anwy5IvE_B7G__Pnw48i7pDfwT7Q_nL?usp=sharing">
     <img src="https://i.ibb.co/xYwb0mh/Webp-net-resizeimage-3.png">
   </a>
 </p
 
-<p>Le theme principal du jeu est déjà disponible !!</p>
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/968587684%3Fsecret_token%3Ds-lL6Z4f1Jh1Q&color=%23e323a0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true%22%3E</iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/ronteah-rth" title="Ronteah" target="_blank" style="color: #cccccc; text-decoration: none;">Ronteah</a> · <a href="https://soundcloud.com/ronteah-rth/mainmenuvvr/s-lL6Z4f1Jh1Q" title="MainMenuVVR" target="_blank" style="color: #cccccc; text-decoration: none;">MainMenuVVR</a></div>
+<p align="center">Le thème principal du jeu est déjà disponible !!</p>
+<p class="has-line-data" data-line-start="2" data-line-end="3" align="center">
+  <a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/968587684%3Fsecret_token%3Ds-lL6Z4f1Jh1Q&color=%23e323a0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true%22%3E">
+    <img src="https://i.ibb.co/Kz4Z516/Webp-net-resizeimage-5.png">
+  </a>
+</p
