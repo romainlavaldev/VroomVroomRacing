@@ -1,0 +1,26 @@
+#Dossier de settings IDEA
+*.idea
+
+#
+#
+perso/
+
+
+#Default Clion
+/shelf/
+/workspace.xml
+/dataSources/
+/dataSources.local.xml
+/httpRequests/
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
