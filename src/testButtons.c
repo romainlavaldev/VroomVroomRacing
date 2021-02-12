@@ -37,7 +37,7 @@ void load_button(SDL_Window * pWindow){ // à tester
     // Boutons = Image
     button_solo = IMG_Load('IMG_PATH');
     button_multi = IMG_Load('IMG_PATH');
-    button_option = IMG_Load('IMG_PATH')
+    button_option = IMG_Load('IMG_PATH');
 
     // Positionnement Image / bouton
 
