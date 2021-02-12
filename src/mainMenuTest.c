@@ -37,22 +37,32 @@ int main(int argc, char** argv)
         printf("C BON");
     }
 
-
-    {
         /* Création de la fenêtre */
         SDL_Window* pWindow = NULL;
-        pWindow = SDL_CreateWindow("Ma première application SDL2",SDL_WINDOWPOS_UNDEFINED,
+        
+        pWindow = SDL_CreateWindow("VROOM VROOM RACIIIIIIING !!!!",SDL_WINDOWPOS_UNDEFINED,
                                                                   SDL_WINDOWPOS_UNDEFINED,
                                                                   1280,
                                                                   720,
                                                                   SDL_WINDOW_SHOWN);
-
+        //SDL_SetWindowFullscreen(pWindow, SDL_WINDOW_FULLSCREEN_DESKTOP);
 
         //
         // CREATION DE L'AUDIO
         //
         
+        SDL_Renderer* renderer = SDL_CreateRenderer(pWindow, -1, 0);
+        SDL_RenderSetLogicalSize(renderer, 1280, 720);
 
+
+        SDL_Surface* bgtmp = SDL_LoadBMP("img/fond.bmp");
+        SDL_Texture* bgTexture = SDL_CreateTextureFromSurface(renderer, bgtmp);
+        SDL_Rect positionBg;
+        positionBg.x = 0;
+        positionBg.y = 0;
+        positionBg.w = 1280;
+        positionBg.h = 720;
+        SDL_RenderCopy(renderer, bgTexture, NULL, &positionBg);
                                                                   
 /*******************************************************************************
  *  MENU 
@@ -63,6 +73,7 @@ int main(int argc, char** argv)
             Mix_PlayMusic(mainMenuMusic, -1);
             int run=1;
             while (run){
+                SDL_RenderPresent(renderer);
                 while (SDL_PollEvent(&event)){
                     switch (event.type){
                     case SDL_QUIT:
@@ -84,7 +95,7 @@ int main(int argc, char** argv)
         {
             fprintf(stderr,"Erreur de création de la fenêtre: %s\n",SDL_GetError()); // La fenêtre SDL n'a pas pu charger
         }
-    }
+    
 
     Mix_CloseAudio();
     SDL_Quit(); // fermeture SDL
