@@ -16,10 +16,12 @@
 #include <string.h>
 #include <time.h>
 #include <SDL.h>
+#include <SDL_mixer.h>
 #include <easySDL.h>
 #include <VVR.h>
 #include <commun.h>
 #include <MainMenu.h>
+#include <SoloCircuitMenu.h>
 
 char fullscreen = 'n';
 SDL_Renderer* renderer;
@@ -28,6 +30,9 @@ SDL_Event event;
 
 int running = true;
 int leftMouseDown = false;
+
+Mix_Chunk* ButtonHoverSFX;
+Mix_Chunk* ButtonClickedSFX;
  
 int main(int argc, char *argv[])
 {
@@ -68,6 +73,7 @@ int main(int argc, char *argv[])
         
     if (mainWindow){
         loadMainMenu();
+        loadSoloCircuitMenu();
 
         //updateMainMenuFrame(event);
 
@@ -96,7 +102,8 @@ int main(int argc, char *argv[])
                 }
                 //printf("Event !\n"); // debug main step 3
 
-                updateMainMenuFrame(event);
+                //updateMainMenuFrame(event);
+                updateSoloCircuitMenuFrame(event);
             }
             
             SDL_RenderPresent(renderer);

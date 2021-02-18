@@ -48,8 +48,9 @@ int main(int argc, char** argv)
         SDL_RenderSetLogicalSize(renderer, 1920, 1080);
 
 
-
-        //CREATION DES IMAGES ET BOUTTONS
+        /*******************************************************************************
+         *  IMAGE ET BOUTTONS 
+         ******************************************************************************/
 
         //Fond
         SDL_Surface* bgTmp = SDL_LoadBMP("img/fond.bmp");

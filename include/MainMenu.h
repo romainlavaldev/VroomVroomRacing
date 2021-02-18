@@ -12,5 +12,3 @@ void updateMainMenuFrame();
 void loadMainMenu();
 
 extern Mix_Chunk* mainMenuMusic;
-extern Mix_Chunk* ButtonHoverSFX;
-extern Mix_Chunk* ButtonClickedSFX;

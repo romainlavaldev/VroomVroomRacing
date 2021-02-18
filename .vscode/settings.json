@@ -6,6 +6,7 @@
         "stdlib.h": "c",
         "easysdl.h": "c",
         "sdl_mixer.h": "c",
-        "vvr.h": "c"
+        "vvr.h": "c",
+        "commun.h": "c"
     }
 }

@@ -22,11 +22,8 @@
 
 int MainMenuIsActive = false;
 
-
-
 Mix_Chunk* mainMenuMusic;
-Mix_Chunk* ButtonHoverSFX;
-Mix_Chunk* ButtonClickedSFX;
+
 
 /**
  * @fn loadMainMenuSounds 
@@ -81,7 +78,7 @@ void startMainMenuSounds(){
 
 void loadMainMenuImages(){
         //Fond
-        SDL_Surface* bgTmp = SDL_LoadBMP("img/fond.bmp");
+        SDL_Surface* bgTmp = SDL_LoadBMP("img/MainMenu/fond.bmp");
         bg.texture = SDL_CreateTextureFromSurface(renderer, bgTmp);
         SDL_FreeSurface(bgTmp);
         bg.position.x = 0;
@@ -91,7 +88,7 @@ void loadMainMenuImages(){
         //SDL_RenderCopy(renderer, bg.texture, NULL, &(bg.position));
 
         //Boutton Solo
-        SDL_Surface* soloButtonTmp = SDL_LoadBMP("img/solo.bmp");
+        SDL_Surface* soloButtonTmp = SDL_LoadBMP("img/MainMenu/solo.bmp");
         btnSolo.texture = SDL_CreateTextureFromSurface(renderer, soloButtonTmp);
         SDL_FreeSurface(soloButtonTmp);
         btnSolo.position.x = 586;
@@ -100,7 +97,7 @@ void loadMainMenuImages(){
         btnSolo.position.h = 150;
 
         //Boutton SoloHover
-        SDL_Surface* soloHoverButtonTmp = SDL_LoadBMP("img/solo_h.bmp");
+        SDL_Surface* soloHoverButtonTmp = SDL_LoadBMP("img/MainMenu/solo_h.bmp");
         btnSoloH.texture = SDL_CreateTextureFromSurface(renderer, soloHoverButtonTmp);
         SDL_FreeSurface(soloHoverButtonTmp);
         btnSoloH.position.x = 586;
@@ -109,7 +106,7 @@ void loadMainMenuImages(){
         btnSoloH.position.h = 150;
 
         //Boutton SoloClick
-        SDL_Surface* soloClickButtonTmp = SDL_LoadBMP("img/solo_c.bmp");
+        SDL_Surface* soloClickButtonTmp = SDL_LoadBMP("img/MainMenu/solo_c.bmp");
         btnSoloC.texture = SDL_CreateTextureFromSurface(renderer, soloClickButtonTmp);
         SDL_FreeSurface(soloClickButtonTmp);
         btnSoloC.position.x = 586;
@@ -118,7 +115,7 @@ void loadMainMenuImages(){
         btnSoloC.position.h = 150;
 
         //Boutton Multijoueur
-        SDL_Surface* multiButtonTmp = SDL_LoadBMP("img/multi.bmp");
+        SDL_Surface* multiButtonTmp = SDL_LoadBMP("img/MainMenu/multi.bmp");
         btnMulti.texture = SDL_CreateTextureFromSurface(renderer, multiButtonTmp);
         SDL_FreeSurface(multiButtonTmp);
         btnMulti.position.x = 586;
@@ -127,7 +124,7 @@ void loadMainMenuImages(){
         btnMulti.position.h = 150;
 
         //Boutton MultijoueurHover
-        SDL_Surface* multiHoverButtonTmp = SDL_LoadBMP("img/multi_h.bmp");
+        SDL_Surface* multiHoverButtonTmp = SDL_LoadBMP("img/MainMenu/multi_h.bmp");
         btnMultiH.texture = SDL_CreateTextureFromSurface(renderer, multiHoverButtonTmp);
         SDL_FreeSurface(multiHoverButtonTmp);
         btnMultiH.position.x = 586;
@@ -137,7 +134,7 @@ void loadMainMenuImages(){
 
 
         //Boutton MultijoueurClick
-        SDL_Surface* multiClickButtonTmp = SDL_LoadBMP("img/multi_c.bmp");
+        SDL_Surface* multiClickButtonTmp = SDL_LoadBMP("img/MainMenu/multi_c.bmp");
         btnMultiC.texture = SDL_CreateTextureFromSurface(renderer, multiClickButtonTmp);
         SDL_FreeSurface(multiClickButtonTmp);
         btnMultiC.position.x = 586;
@@ -147,7 +144,7 @@ void loadMainMenuImages(){
 
 
         //Boutton Quitter
-        SDL_Surface* quitButtonTmp = SDL_LoadBMP("img/quitter.bmp");
+        SDL_Surface* quitButtonTmp = SDL_LoadBMP("img/MainMenu/quitter.bmp");
         btnQuitter.texture = SDL_CreateTextureFromSurface(renderer, quitButtonTmp);
         SDL_FreeSurface(quitButtonTmp);
         btnQuitter.position.x = 1030;
@@ -157,7 +154,7 @@ void loadMainMenuImages(){
 
 
         //Boutton QuitterHover
-        SDL_Surface* quitHoverButtonTmp = SDL_LoadBMP("img/quitter_h.bmp");
+        SDL_Surface* quitHoverButtonTmp = SDL_LoadBMP("img/MainMenu/quitter_h.bmp");
         btnQuitterH.texture = SDL_CreateTextureFromSurface(renderer, quitHoverButtonTmp);
         SDL_FreeSurface(quitHoverButtonTmp);
         btnQuitterH.position.x = 1030;
@@ -166,7 +163,7 @@ void loadMainMenuImages(){
         btnQuitterH.position.h = 100;
 
         //Boutton QuitterClick
-        SDL_Surface* quitClickButtonTmp = SDL_LoadBMP("img/quitter_c.bmp");
+        SDL_Surface* quitClickButtonTmp = SDL_LoadBMP("img/MainMenu/quitter_c.bmp");
         btnQuitterC.texture = SDL_CreateTextureFromSurface(renderer, quitClickButtonTmp);
         SDL_FreeSurface(quitClickButtonTmp);
         btnQuitterC.position.x = 1030;
@@ -178,7 +175,7 @@ void loadMainMenuImages(){
 
 /**
  * @fn loadMainMenu 
- * @brief Load les les fonctiones du main menu (Images,sons, et demarrage)
+ * @brief Load les les fonctions du main menu (Images,sons, et demarrage)
  */
 
 void loadMainMenu(){
@@ -190,7 +187,7 @@ void loadMainMenu(){
 
 /**
  * @fn destroyMainMenu 
- * @brief Destruction de la fenêtre m
+ * @brief Destruction de la fenêtre Menu
  */
 
 void destroyMainMenu();
