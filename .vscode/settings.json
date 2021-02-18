@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "sdl.h": "c",
+        "stdlib.h": "c",
+        "easysdl.h": "c",
+        "sdl_mixer.h": "c",
+        "vvr.h": "c"
     }
 }

@@ -1,7 +1,9 @@
 #Dossier de settings IDEA
 *.idea
+#Dossier de settings VSCODE
+*.vscode
 
-#
+
 #
 perso/
 
