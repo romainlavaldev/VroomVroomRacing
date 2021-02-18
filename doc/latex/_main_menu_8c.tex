@@ -1,0 +1,259 @@
+\hypertarget{_main_menu_8c}{}\doxysection{Référence du fichier Main\+Menu.\+c}
+\label{_main_menu_8c}\index{MainMenu.c@{MainMenu.c}}
+
+
+Fenêtre d\textquotesingle{}ouverture.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL\+\_\+mixer.\+h$>$}\newline
+{\ttfamily \#include $<$VVR.\+h$>$}\newline
+{\ttfamily \#include $<$commun.\+h$>$}\newline
+{\ttfamily \#include $<$Main\+Menu.\+h$>$}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_main_menu_8c_a7f5d858524e45ac98ecb3b6f161ea64f}{load\+Main\+Menu\+Sounds}} ()
+\begin{DoxyCompactList}\small\item\em Load les sons du Menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_main_menu_8c_a609c5111ba09c1502d5dcf2ba8404d61}{start\+Main\+Menu\+Sounds}} ()
+\begin{DoxyCompactList}\small\item\em Demarre les sons du Menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_main_menu_8c_a36f7a44ba341563764dddc6abc83ad72}{load\+Main\+Menu\+Images}} ()
+\begin{DoxyCompactList}\small\item\em Load les images du Menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_main_menu_8c_a1664ceb08ed318024dc187b22f3d337c}{load\+Main\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Load les les fonctiones du main menu (Images,sons, et demarrage) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_main_menu_8c_a17dcb842fd5b4245070c0921b3860d86}{destroy\+Main\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Destruction de la fenêtre m. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_main_menu_8c_a03fc696b93f5d3426327976d330134b4}{update\+Main\+Menu\+Frame}} (SDL\+\_\+\+Event \mbox{\hyperlink{_v_v_r_8c_a6b57f01d3c576db5368dd0efc2f435a4}{event}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_main_menu_8c_a1fd231cbc37f5a66a2effe4419c5e3ba}{Main\+Menu\+Is\+Active}} = false
+\begin{DoxyCompactList}\small\item\em Introduit le dossier principal VVR. \end{DoxyCompactList}\item 
+Mix\+\_\+\+Chunk $\ast$ \mbox{\hyperlink{_main_menu_8c_a98a40fc0a42136151cc95c96c848443f}{main\+Menu\+Music}}
+\item 
+Mix\+\_\+\+Chunk $\ast$ \mbox{\hyperlink{_main_menu_8c_a92c9d2f6a38a817af6a7a03903544de6}{Button\+Hover\+SFX}}
+\item 
+Mix\+\_\+\+Chunk $\ast$ \mbox{\hyperlink{_main_menu_8c_a7acd0d14c295262ca4514ff226c8f6a2}{Button\+Clicked\+SFX}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_main_menu_8c_a0bf48a7df0280eaa8b35da9193f48170}{bg}}
+\begin{DoxyCompactList}\small\item\em Définition des boutons de la main window. \end{DoxyCompactList}\item 
+image\+\_\+t \mbox{\hyperlink{_main_menu_8c_af9a292ef09116743c774cc7e6e1bb982}{btn\+Solo}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_main_menu_8c_a42bbf44dd498ebee3e8ea93e81ca578c}{btn\+SoloH}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_main_menu_8c_a62cabdaaf302bfa4bd37aa8ae4ca0d72}{btn\+SoloC}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_main_menu_8c_a00203e277720e202745544b2c1ada7a5}{btn\+Multi}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_main_menu_8c_ae604703ed7b9597b188c67f5f8753431}{btn\+MultiH}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_main_menu_8c_a99f1306edbd409542686025f654c3377}{btn\+MultiC}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_main_menu_8c_a821639b44902e796784bd5607325d05b}{btn\+Quitter}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_main_menu_8c_a50318316ff375e3edcd8c24d6c391250}{btn\+QuitterH}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_main_menu_8c_a032d40f4e86e2ed19860fdc7534465ef}{btn\+QuitterC}}
+\item 
+int \mbox{\hyperlink{_main_menu_8c_a8bdeb36352b734555b8da96783775fa7}{on\+Button\+Solo}} = false
+\item 
+int \mbox{\hyperlink{_main_menu_8c_a7a25d690400db1f7968da98f15415e8e}{on\+Button\+Multi}} = false
+\item 
+int \mbox{\hyperlink{_main_menu_8c_aa9391e70d4bd916b3968db955c37df37}{on\+Button\+Quit}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fenêtre d\textquotesingle{}ouverture. 
+
+\begin{DoxyAuthor}{Auteur}
+\{Romain LAVAL, Nathan LABBE, Louis GEORGET\} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+25 Janvier 2021
+\end{DoxyDate}
+Menu principal, et d\textquotesingle{}accès vers les autres fenêtre \begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{_main_menu_8c_a17dcb842fd5b4245070c0921b3860d86}\label{_main_menu_8c_a17dcb842fd5b4245070c0921b3860d86}} 
+\index{MainMenu.c@{MainMenu.c}!destroyMainMenu@{destroyMainMenu}}
+\index{destroyMainMenu@{destroyMainMenu}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{destroyMainMenu()}{destroyMainMenu()}}
+{\footnotesize\ttfamily destroy\+Main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruction de la fenêtre m. 
+
+actualise la fenêtre celon le déplacement de la souris, hover.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em SDL\+\_\+\+Event} & event \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_main_menu_8c_a1664ceb08ed318024dc187b22f3d337c}\label{_main_menu_8c_a1664ceb08ed318024dc187b22f3d337c}} 
+\index{MainMenu.c@{MainMenu.c}!loadMainMenu@{loadMainMenu}}
+\index{loadMainMenu@{loadMainMenu}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{loadMainMenu()}{loadMainMenu()}}
+{\footnotesize\ttfamily load\+Main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load les les fonctiones du main menu (Images,sons, et demarrage) 
+
+\mbox{\Hypertarget{_main_menu_8c_a36f7a44ba341563764dddc6abc83ad72}\label{_main_menu_8c_a36f7a44ba341563764dddc6abc83ad72}} 
+\index{MainMenu.c@{MainMenu.c}!loadMainMenuImages@{loadMainMenuImages}}
+\index{loadMainMenuImages@{loadMainMenuImages}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{loadMainMenuImages()}{loadMainMenuImages()}}
+{\footnotesize\ttfamily load\+Main\+Menu\+Images (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load les images du Menu. 
+
+\mbox{\Hypertarget{_main_menu_8c_a7f5d858524e45ac98ecb3b6f161ea64f}\label{_main_menu_8c_a7f5d858524e45ac98ecb3b6f161ea64f}} 
+\index{MainMenu.c@{MainMenu.c}!loadMainMenuSounds@{loadMainMenuSounds}}
+\index{loadMainMenuSounds@{loadMainMenuSounds}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{loadMainMenuSounds()}{loadMainMenuSounds()}}
+{\footnotesize\ttfamily load\+Main\+Menu\+Sounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load les sons du Menu. 
+
+\mbox{\Hypertarget{_main_menu_8c_a609c5111ba09c1502d5dcf2ba8404d61}\label{_main_menu_8c_a609c5111ba09c1502d5dcf2ba8404d61}} 
+\index{MainMenu.c@{MainMenu.c}!startMainMenuSounds@{startMainMenuSounds}}
+\index{startMainMenuSounds@{startMainMenuSounds}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{startMainMenuSounds()}{startMainMenuSounds()}}
+{\footnotesize\ttfamily start\+Main\+Menu\+Sounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Demarre les sons du Menu. 
+
+\mbox{\Hypertarget{_main_menu_8c_a03fc696b93f5d3426327976d330134b4}\label{_main_menu_8c_a03fc696b93f5d3426327976d330134b4}} 
+\index{MainMenu.c@{MainMenu.c}!updateMainMenuFrame@{updateMainMenuFrame}}
+\index{updateMainMenuFrame@{updateMainMenuFrame}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{updateMainMenuFrame()}{updateMainMenuFrame()}}
+{\footnotesize\ttfamily void update\+Main\+Menu\+Frame (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event}]{event }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{_main_menu_8c_a0bf48a7df0280eaa8b35da9193f48170}\label{_main_menu_8c_a0bf48a7df0280eaa8b35da9193f48170}} 
+\index{MainMenu.c@{MainMenu.c}!bg@{bg}}
+\index{bg@{bg}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{bg}{bg}}
+{\footnotesize\ttfamily image\+\_\+t bg}
+
+
+
+Définition des boutons de la main window. 
+
+\mbox{\Hypertarget{_main_menu_8c_a00203e277720e202745544b2c1ada7a5}\label{_main_menu_8c_a00203e277720e202745544b2c1ada7a5}} 
+\index{MainMenu.c@{MainMenu.c}!btnMulti@{btnMulti}}
+\index{btnMulti@{btnMulti}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnMulti}{btnMulti}}
+{\footnotesize\ttfamily image\+\_\+t btn\+Multi}
+
+\mbox{\Hypertarget{_main_menu_8c_a99f1306edbd409542686025f654c3377}\label{_main_menu_8c_a99f1306edbd409542686025f654c3377}} 
+\index{MainMenu.c@{MainMenu.c}!btnMultiC@{btnMultiC}}
+\index{btnMultiC@{btnMultiC}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnMultiC}{btnMultiC}}
+{\footnotesize\ttfamily image\+\_\+t btn\+MultiC}
+
+\mbox{\Hypertarget{_main_menu_8c_ae604703ed7b9597b188c67f5f8753431}\label{_main_menu_8c_ae604703ed7b9597b188c67f5f8753431}} 
+\index{MainMenu.c@{MainMenu.c}!btnMultiH@{btnMultiH}}
+\index{btnMultiH@{btnMultiH}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnMultiH}{btnMultiH}}
+{\footnotesize\ttfamily image\+\_\+t btn\+MultiH}
+
+\mbox{\Hypertarget{_main_menu_8c_a821639b44902e796784bd5607325d05b}\label{_main_menu_8c_a821639b44902e796784bd5607325d05b}} 
+\index{MainMenu.c@{MainMenu.c}!btnQuitter@{btnQuitter}}
+\index{btnQuitter@{btnQuitter}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnQuitter}{btnQuitter}}
+{\footnotesize\ttfamily image\+\_\+t btn\+Quitter}
+
+\mbox{\Hypertarget{_main_menu_8c_a032d40f4e86e2ed19860fdc7534465ef}\label{_main_menu_8c_a032d40f4e86e2ed19860fdc7534465ef}} 
+\index{MainMenu.c@{MainMenu.c}!btnQuitterC@{btnQuitterC}}
+\index{btnQuitterC@{btnQuitterC}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnQuitterC}{btnQuitterC}}
+{\footnotesize\ttfamily image\+\_\+t btn\+QuitterC}
+
+\mbox{\Hypertarget{_main_menu_8c_a50318316ff375e3edcd8c24d6c391250}\label{_main_menu_8c_a50318316ff375e3edcd8c24d6c391250}} 
+\index{MainMenu.c@{MainMenu.c}!btnQuitterH@{btnQuitterH}}
+\index{btnQuitterH@{btnQuitterH}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnQuitterH}{btnQuitterH}}
+{\footnotesize\ttfamily image\+\_\+t btn\+QuitterH}
+
+\mbox{\Hypertarget{_main_menu_8c_af9a292ef09116743c774cc7e6e1bb982}\label{_main_menu_8c_af9a292ef09116743c774cc7e6e1bb982}} 
+\index{MainMenu.c@{MainMenu.c}!btnSolo@{btnSolo}}
+\index{btnSolo@{btnSolo}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnSolo}{btnSolo}}
+{\footnotesize\ttfamily image\+\_\+t btn\+Solo}
+
+\mbox{\Hypertarget{_main_menu_8c_a62cabdaaf302bfa4bd37aa8ae4ca0d72}\label{_main_menu_8c_a62cabdaaf302bfa4bd37aa8ae4ca0d72}} 
+\index{MainMenu.c@{MainMenu.c}!btnSoloC@{btnSoloC}}
+\index{btnSoloC@{btnSoloC}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnSoloC}{btnSoloC}}
+{\footnotesize\ttfamily image\+\_\+t btn\+SoloC}
+
+\mbox{\Hypertarget{_main_menu_8c_a42bbf44dd498ebee3e8ea93e81ca578c}\label{_main_menu_8c_a42bbf44dd498ebee3e8ea93e81ca578c}} 
+\index{MainMenu.c@{MainMenu.c}!btnSoloH@{btnSoloH}}
+\index{btnSoloH@{btnSoloH}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnSoloH}{btnSoloH}}
+{\footnotesize\ttfamily image\+\_\+t btn\+SoloH}
+
+\mbox{\Hypertarget{_main_menu_8c_a7acd0d14c295262ca4514ff226c8f6a2}\label{_main_menu_8c_a7acd0d14c295262ca4514ff226c8f6a2}} 
+\index{MainMenu.c@{MainMenu.c}!ButtonClickedSFX@{ButtonClickedSFX}}
+\index{ButtonClickedSFX@{ButtonClickedSFX}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{ButtonClickedSFX}{ButtonClickedSFX}}
+{\footnotesize\ttfamily Mix\+\_\+\+Chunk$\ast$ Button\+Clicked\+SFX}
+
+\mbox{\Hypertarget{_main_menu_8c_a92c9d2f6a38a817af6a7a03903544de6}\label{_main_menu_8c_a92c9d2f6a38a817af6a7a03903544de6}} 
+\index{MainMenu.c@{MainMenu.c}!ButtonHoverSFX@{ButtonHoverSFX}}
+\index{ButtonHoverSFX@{ButtonHoverSFX}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{ButtonHoverSFX}{ButtonHoverSFX}}
+{\footnotesize\ttfamily Mix\+\_\+\+Chunk$\ast$ Button\+Hover\+SFX}
+
+\mbox{\Hypertarget{_main_menu_8c_a1fd231cbc37f5a66a2effe4419c5e3ba}\label{_main_menu_8c_a1fd231cbc37f5a66a2effe4419c5e3ba}} 
+\index{MainMenu.c@{MainMenu.c}!MainMenuIsActive@{MainMenuIsActive}}
+\index{MainMenuIsActive@{MainMenuIsActive}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{MainMenuIsActive}{MainMenuIsActive}}
+{\footnotesize\ttfamily int Main\+Menu\+Is\+Active = false}
+
+
+
+Introduit le dossier principal VVR. 
+
+récupère dossier commun \mbox{\Hypertarget{_main_menu_8c_a98a40fc0a42136151cc95c96c848443f}\label{_main_menu_8c_a98a40fc0a42136151cc95c96c848443f}} 
+\index{MainMenu.c@{MainMenu.c}!mainMenuMusic@{mainMenuMusic}}
+\index{mainMenuMusic@{mainMenuMusic}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{mainMenuMusic}{mainMenuMusic}}
+{\footnotesize\ttfamily Mix\+\_\+\+Chunk$\ast$ main\+Menu\+Music}
+
+\mbox{\Hypertarget{_main_menu_8c_a7a25d690400db1f7968da98f15415e8e}\label{_main_menu_8c_a7a25d690400db1f7968da98f15415e8e}} 
+\index{MainMenu.c@{MainMenu.c}!onButtonMulti@{onButtonMulti}}
+\index{onButtonMulti@{onButtonMulti}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{onButtonMulti}{onButtonMulti}}
+{\footnotesize\ttfamily int on\+Button\+Multi = false}
+
+\mbox{\Hypertarget{_main_menu_8c_aa9391e70d4bd916b3968db955c37df37}\label{_main_menu_8c_aa9391e70d4bd916b3968db955c37df37}} 
+\index{MainMenu.c@{MainMenu.c}!onButtonQuit@{onButtonQuit}}
+\index{onButtonQuit@{onButtonQuit}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{onButtonQuit}{onButtonQuit}}
+{\footnotesize\ttfamily int on\+Button\+Quit = false}
+
+\mbox{\Hypertarget{_main_menu_8c_a8bdeb36352b734555b8da96783775fa7}\label{_main_menu_8c_a8bdeb36352b734555b8da96783775fa7}} 
+\index{MainMenu.c@{MainMenu.c}!onButtonSolo@{onButtonSolo}}
+\index{onButtonSolo@{onButtonSolo}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{onButtonSolo}{onButtonSolo}}
+{\footnotesize\ttfamily int on\+Button\+Solo = false}
+
