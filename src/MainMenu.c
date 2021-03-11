@@ -59,7 +59,7 @@ void startMainMenuSounds(){
 
 /// Définition des boutons de la main window
 
-    image_t bg;
+    image_t MainMenuBG;
     image_t btnSolo;
     image_t btnSoloH;
     image_t btnSoloC;
@@ -78,14 +78,14 @@ void startMainMenuSounds(){
 
 void loadMainMenuImages(){
         //Fond
-        SDL_Surface* bgTmp = SDL_LoadBMP("img/MainMenu/fond.bmp");
-        bg.texture = SDL_CreateTextureFromSurface(renderer, bgTmp);
-        SDL_FreeSurface(bgTmp);
-        bg.position.x = 0;
-        bg.position.y = 0;
-        bg.position.w = 1920;
-        bg.position.h = 1080;
-        //SDL_RenderCopy(renderer, bg.texture, NULL, &(bg.position));
+        SDL_Surface* MainMenuBGTmp = SDL_LoadBMP("img/MainMenu/fond.bmp");
+        MainMenuBG.texture = SDL_CreateTextureFromSurface(renderer, MainMenuBGTmp);
+        SDL_FreeSurface(MainMenuBGTmp);
+        MainMenuBG.position.x = 0;
+        MainMenuBG.position.y = 0;
+        MainMenuBG.position.w = 1920;
+        MainMenuBG.position.h = 1080;
+        //SDL_RenderCopy(renderer, MainMenuBG.texture, NULL, &(MainMenuBG.position));
 
         //Boutton Solo
         SDL_Surface* soloButtonTmp = SDL_LoadBMP("img/MainMenu/solo.bmp");
@@ -209,7 +209,7 @@ void updateMainMenuFrame(SDL_Event event){
     int cursosY = event.button.y;
 
     
-    SDL_RenderCopy(renderer, bg.texture, NULL, &(bg.position));
+    SDL_RenderCopy(renderer, MainMenuBG.texture, NULL, &(MainMenuBG.position));
 
     if((cursorX > btnSolo.position.x) && (cursorX < btnSolo.position.x + btnSolo.position.w) && (cursosY > btnSolo.position.y) && (cursosY < btnSolo.position.y + btnSolo.position.h)){
         if (!onButtonSolo){
@@ -226,6 +226,7 @@ void updateMainMenuFrame(SDL_Event event){
         if (event.type == SDL_MOUSEBUTTONUP){
                 //play sound
                 Mix_PlayChannel(-1, ButtonClickedSFX, 0);
+                ActiveMenu = 2; // Passage Menu SoloCircuit
             }
     }else{
         SDL_RenderCopy(renderer, btnSolo.texture, NULL, &(btnSolo.position));

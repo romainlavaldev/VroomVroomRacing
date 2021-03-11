@@ -3,10 +3,9 @@
  *              Fenêtre d'ouverture 
  * 
  * 
- * @file MainMenu.c
+ * @file SoloCircuitMenu.c
  * @author {Romain LAVAL, Nathan LABBE, Louis GEORGET}
- * @date 25 Janvier 2021
- * @brief Menu principal, et d'accès vers les autres fenêtre
+ * @brief Menu Circuit de jeu
  * @version 1.0
  * 
  * ********************************************************* */
@@ -21,7 +20,7 @@
 #include <SoloCircuitMenu.h>
 
 /**
- * @fn loadMainMenuSounds 
+ * @fn loadSoloCircuitMenuSounds 
  * @brief Load les sons du Menu
  */
 
@@ -33,95 +32,98 @@ void loadSoloCircuitMenuSounds(){
     ButtonClickedSFX = NULL;
     ButtonClickedSFX = Mix_LoadWAV("sound/SFX/ButtonClicked.mp3");
 
+    ButtonBackSFX = NULL;
+    ButtonBackSFX = Mix_LoadWAV("sound/SFX/ButtonBack.mp3");
+
 }
 
 /// Définition des boutons de la main window
 
-    image_t bg;
+    image_t SoloCircuitBG;
     image_t btnCircuit;
     image_t btnCircuitH;
     image_t btnCircuitC;
-    image_t btnRetour;
-    image_t btnRetourH;
-    image_t btnRetourC;
+    image_t btnCircuitRetour;
+    image_t btnCircuitRetourH;
+    image_t btnCircuitRetourC;
 
 
 /**
- * @fn loadMainMenuImages 
+ * @fn loadSoloCircuitMenuImages 
  * @brief Load les images du Menu
  */
 
 void loadSoloCircuitMenuImages(){
         //Fond
-        SDL_Surface* bgTmp = SDL_LoadBMP("img/SoloCircuitmenu/fond.bmp");
-        bg.texture = SDL_CreateTextureFromSurface(renderer, bgTmp);
-        SDL_FreeSurface(bgTmp);
-        bg.position.x = 0;
-        bg.position.y = 0;
-        bg.position.w = 1920;
-        bg.position.h = 1080;
-        //SDL_RenderCopy(renderer, bg.texture, NULL, &(bg.position));
+        SDL_Surface* SoloCircuitBGTmp = SDL_LoadBMP("img/SoloCircuitMenu/fond.bmp");
+        SoloCircuitBG.texture = SDL_CreateTextureFromSurface(renderer, SoloCircuitBGTmp);
+        SDL_FreeSurface(SoloCircuitBGTmp);
+        SoloCircuitBG.position.x = 0;
+        SoloCircuitBG.position.y = 0;
+        SoloCircuitBG.position.w = 1920;
+        SoloCircuitBG.position.h = 1080;
+        //SDL_RenderCopy(renderer, SoloCircuitBG.texture, NULL, &(SoloCircuitBG.position));
 
         //Boutton Circuit
         SDL_Surface* CircuitButtonTmp = SDL_LoadBMP("img/SoloCircuitMenu/circuit_1.bmp");
         btnCircuit.texture = SDL_CreateTextureFromSurface(renderer, CircuitButtonTmp);
         SDL_FreeSurface(CircuitButtonTmp);
-        btnCircuit.position.x = 586;
-        btnCircuit.position.y = 319;
-        btnCircuit.position.w = 1334;
-        btnCircuit.position.h = 150;
+        btnCircuit.position.x = 270;
+        btnCircuit.position.y = 470;
+        btnCircuit.position.w = 1650;
+        btnCircuit.position.h = 440;
 
         //Boutton CircuitHover
         SDL_Surface* CircuitHoverButtonTmp = SDL_LoadBMP("img/SoloCircuitMenu/Hover/circuit_1_h.bmp");
         btnCircuitH.texture = SDL_CreateTextureFromSurface(renderer, CircuitHoverButtonTmp);
         SDL_FreeSurface(CircuitHoverButtonTmp);
-        btnCircuitH.position.x = 586;
-        btnCircuitH.position.y = 319;
-        btnCircuitH.position.w = 1334;
-        btnCircuitH.position.h = 150;
+        btnCircuitH.position.x = 270;
+        btnCircuitH.position.y = 470;
+        btnCircuitH.position.w = 1650;
+        btnCircuitH.position.h = 440;
 
         //Boutton CircuitClick
-        SDL_Surface* CircuitClickButtonTmp = SDL_LoadBMP("img/SoloCircuitMenu/Hover/circuit_1_c.bmp");
+        SDL_Surface* CircuitClickButtonTmp = SDL_LoadBMP("img/SoloCircuitMenu/Click/circuit_1_c.bmp");
         btnCircuitC.texture = SDL_CreateTextureFromSurface(renderer, CircuitClickButtonTmp);
         SDL_FreeSurface(CircuitClickButtonTmp);
-        btnCircuitC.position.x = 586;
-        btnCircuitC.position.y = 319;
-        btnCircuitC.position.w = 1334;
-        btnCircuitC.position.h = 150;
+        btnCircuitC.position.x = 270;
+        btnCircuitC.position.y = 470;
+        btnCircuitC.position.w = 1650;
+        btnCircuitC.position.h = 440;
 
 
-        //Boutton Retour
-        SDL_Surface* retourButtonTmp = SDL_LoadBMP("img/SoloCircuitMenu/retour.bmp");
-        btnRetour.texture = SDL_CreateTextureFromSurface(renderer, retourButtonTmp);
-        SDL_FreeSurface(retourButtonTmp);
-        btnRetour.position.x = 1030;
-        btnRetour.position.y = 901;
-        btnRetour.position.w = 890;
-        btnRetour.position.h = 100;
+        //Boutton CircuitRetour
+        SDL_Surface* CircuitRetourButtonTmp = SDL_LoadBMP("img/SoloCircuitMenu/retour.bmp");
+        btnCircuitRetour.texture = SDL_CreateTextureFromSurface(renderer, CircuitRetourButtonTmp);
+        SDL_FreeSurface(CircuitRetourButtonTmp);
+        btnCircuitRetour.position.x = 0;
+        btnCircuitRetour.position.y = 327;
+        btnCircuitRetour.position.w = 340;
+        btnCircuitRetour.position.h = 89;
 
 
-        //Boutton RetourHover
-        SDL_Surface* retourHoverButtonTmp = SDL_LoadBMP("img/SoloCircuitMenu/Hover/retour_h.bmp");
-        btnRetourH.texture = SDL_CreateTextureFromSurface(renderer, retourHoverButtonTmp);
-        SDL_FreeSurface(retourHoverButtonTmp);
-        btnRetourH.position.x = 1030;
-        btnRetourH.position.y = 901;
-        btnRetourH.position.w = 890;
-        btnRetourH.position.h = 100;
+        //Boutton CircuitRetourHover
+        SDL_Surface* CircuitRetourHoverButtonTmp = SDL_LoadBMP("img/SoloCircuitMenu/Hover/retour_h.bmp");
+        btnCircuitRetourH.texture = SDL_CreateTextureFromSurface(renderer, CircuitRetourHoverButtonTmp);
+        SDL_FreeSurface(CircuitRetourHoverButtonTmp);
+        btnCircuitRetourH.position.x = 0;
+        btnCircuitRetourH.position.y = 327;
+        btnCircuitRetourH.position.w = 340;
+        btnCircuitRetourH.position.h = 89;
 
-        //Boutton RetourClick
-        SDL_Surface* retourClickButtonTmp = SDL_LoadBMP("img/SoloCircuitMenu/Hover/circuit_1_c.bmp");
-        btnRetourC.texture = SDL_CreateTextureFromSurface(renderer, retourClickButtonTmp);
-        SDL_FreeSurface(retourClickButtonTmp);
-        btnRetourC.position.x = 1030;
-        btnRetourC.position.y = 901;
-        btnRetourC.position.w = 890;
-        btnRetourC.position.h = 100;
+        //Boutton CircuitRetourClick
+        SDL_Surface* CircuitRetourClickButtonTmp = SDL_LoadBMP("img/SoloCircuitMenu/Click/retour_c.bmp");
+        btnCircuitRetourC.texture = SDL_CreateTextureFromSurface(renderer, CircuitRetourClickButtonTmp);
+        SDL_FreeSurface(CircuitRetourClickButtonTmp);
+        btnCircuitRetourC.position.x = 0;
+        btnCircuitRetourC.position.y = 327;
+        btnCircuitRetourC.position.w = 340;
+        btnCircuitRetourC.position.h = 89;
 }
 
 
 /**
- * @fn loadMainMenu 
+ * @fn loadSoloCircuitMenu 
  * @brief Load les les fonctiones du main menu (Images,sons, et demarrage)
  */
 
@@ -132,18 +134,18 @@ void loadSoloCircuitMenu(){
 }
 
 /**
- * @fn destroyMainMenu 
+ * @fn destroySoloMenu 
  * @brief Destruction de la fenêtre m
  */
 
 void destroySoloMenu();
 
 int onButtonCircuit = false;
-int onButtonRetour = false;
+int onButtonCircuitRetour = false;
 
 
 /**
- * @fn destroyMainMenu 
+ * @fn updateSoloCircuitMenuFrame
  * @param SDL_Event event
  * @brief actualise la fenêtre celon le déplacement de la souris, hover.
  */
@@ -154,7 +156,7 @@ void updateSoloCircuitMenuFrame(SDL_Event event){
     int cursosY = event.button.y;
 
     
-    SDL_RenderCopy(renderer, bg.texture, NULL, &(bg.position));
+    SDL_RenderCopy(renderer, SoloCircuitBG.texture, NULL, &(SoloCircuitBG.position));
 
     if((cursorX > btnCircuit.position.x) && (cursorX < btnCircuit.position.x + btnCircuit.position.w) && (cursosY > btnCircuit.position.y) && (cursosY < btnCircuit.position.y + btnCircuit.position.h)){
         if (!onButtonCircuit){
@@ -171,6 +173,7 @@ void updateSoloCircuitMenuFrame(SDL_Event event){
         if (event.type == SDL_MOUSEBUTTONUP){
                 //play sound
                 Mix_PlayChannel(-1, ButtonClickedSFX, 0);
+                ActiveMenu = 3;
             }
     }else{
         SDL_RenderCopy(renderer, btnCircuit.texture, NULL, &(btnCircuit.position));
@@ -178,23 +181,27 @@ void updateSoloCircuitMenuFrame(SDL_Event event){
         if (onButtonCircuit) onButtonCircuit = false;
     }
     
-    if((cursorX > btnRetour.position.x) && (cursorX < btnRetour.position.x + btnRetour.position.w) && (cursosY > btnRetour.position.y) && (cursosY < btnRetour.position.y + btnRetour.position.h)){
-        if (!onButtonRetour){
+    if((cursorX > btnCircuitRetour.position.x) && (cursorX < btnCircuitRetour.position.x + btnCircuitRetour.position.w) && (cursosY > btnCircuitRetour.position.y) && (cursosY < btnCircuitRetour.position.y + btnCircuitRetour.position.h)){
+        if (!onButtonCircuitRetour){
             //play sound
             Mix_PlayChannel(-1, ButtonHoverSFX, 0);
-            onButtonRetour = 1;
+            onButtonCircuitRetour = 1;
         }
 
-        if(event.type == SDL_MOUSEBUTTONUP && event.button.button == SDL_BUTTON_LEFT)
-            quitter();
+        if(event.type == SDL_MOUSEBUTTONUP && event.button.button == SDL_BUTTON_LEFT){
+            //play sound
+            Mix_PlayChannel(-1, ButtonBackSFX, 0);
+            ActiveMenu = 1; //Retour Menu 
+        }
+           
         if(leftMouseDown)
-            SDL_RenderCopy(renderer, btnRetourC.texture, NULL, &(btnRetourC.position));
+            SDL_RenderCopy(renderer, btnCircuitRetourC.texture, NULL, &(btnCircuitRetourC.position));
         else
-            SDL_RenderCopy(renderer, btnRetourH.texture, NULL, &(btnRetourH.position));
+            SDL_RenderCopy(renderer, btnCircuitRetourH.texture, NULL, &(btnCircuitRetourH.position));
     }else{
-        SDL_RenderCopy(renderer, btnRetour.texture, NULL, &(btnRetour.position));
+        SDL_RenderCopy(renderer, btnCircuitRetour.texture, NULL, &(btnCircuitRetour.position));
 
-        if (onButtonRetour) onButtonRetour = false;
+        if (onButtonCircuitRetour) onButtonCircuitRetour = false;
     }
 
     printf("Updated Frame with Solo Circuit Menu\n"); //Debug updateMainMenuFrame

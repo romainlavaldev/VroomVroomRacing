@@ -22,6 +22,7 @@
 #include <commun.h>
 #include <MainMenu.h>
 #include <SoloCircuitMenu.h>
+#include <SoloVoitureMenu.h>
 
 char fullscreen = 'n';
 SDL_Renderer* renderer;
@@ -33,6 +34,9 @@ int leftMouseDown = false;
 
 Mix_Chunk* ButtonHoverSFX;
 Mix_Chunk* ButtonClickedSFX;
+Mix_Chunk* ButtonBackSFX;
+
+int ActiveMenu = 1;  //1 = MainMenu    2 = SoloCircuitMenu    3 = SoloVoitureMenu
  
 int main(int argc, char *argv[])
 {
@@ -74,8 +78,8 @@ int main(int argc, char *argv[])
     if (mainWindow){
         loadMainMenu();
         loadSoloCircuitMenu();
-
-        //updateMainMenuFrame(event);
+        loadSoloVoitureMenu();
+        updateMainMenuFrame(event);
 
 
         while(running){
@@ -91,6 +95,7 @@ int main(int argc, char *argv[])
                 case SDL_MOUSEBUTTONUP:
                     if(event.button.button = SDL_BUTTON_LEFT)
                         leftMouseDown = false;
+
                         break;
 
                 case SDL_QUIT:
@@ -102,8 +107,23 @@ int main(int argc, char *argv[])
                 }
                 //printf("Event !\n"); // debug main step 3
 
-                //updateMainMenuFrame(event);
-                updateSoloCircuitMenuFrame(event);
+                switch (ActiveMenu)
+                {
+                case 1: //MainMenu
+                    updateMainMenuFrame(event);
+                    break;
+                
+                case 2: //SoloCircuitMenu
+                    updateSoloCircuitMenuFrame(event);
+                    break;
+
+                case 3: //SoloVoitureMenu
+                    updateSoloVoitureMenuFrame(event);
+                    break;
+                    
+                default:
+                    break;
+                }
             }
             
             SDL_RenderPresent(renderer);
