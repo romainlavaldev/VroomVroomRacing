@@ -135,6 +135,10 @@ int main(int argc, char *argv[])
     return 0;
 }
 
+/**
+ * @fn quitter 
+ * @brief Bouton quitter le jeu
+ */
 
 void quitter(){
     running = false;

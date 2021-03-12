@@ -3,6 +3,11 @@
 #include <glfw3.h>
 #include <stdio.h>
 
+#define SCREEN_WIDTH 640
+#define SCREEN_HEIGHT 480
+
+
+
 int main(int argc, char **argv)
 {
 	
@@ -28,7 +33,7 @@ int main(int argc, char **argv)
 
 
     // Création de la fenêtre
-    fenetre = SDL_CreateWindow("Test SDL 2.0", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL);
+    fenetre = SDL_CreateWindow("Test SDL 2.0", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL);
 
 
     // Création du contexte OpenGL
@@ -66,44 +71,21 @@ int main(int argc, char **argv)
         return -1;
     }
 
-    static const GLfloat vertices[] = {
-    -0.8f,-0.8f,-0.8f, // triangle 1 : begin
-    -0.8f,-0.8f, 0.8f,
-    -0.8f, 0.8f, 0.8f, // triangle 1 : end
-    0.8f, 0.8f,-0.8f, // triangle 2 : begin
-    -0.8f,-0.8f,-0.8f,
-    -0.8f, 0.8f,-0.8f, // triangle 2 : end
-    0.8f,-0.8f, 0.8f,
-    -0.8f,-0.8f,-0.8f,
-    0.8f,-0.8f,-0.8f,
-    0.8f, 0.8f,-0.8f,
-    0.8f,-0.8f,-0.8f,
-    -0.8f,-0.8f,-0.8f,
-    -0.8f,-0.8f,-0.8f,
-    -0.8f, 0.8f, 0.8f,
-    -0.8f, 0.8f,-0.8f,
-    0.8f,-0.8f, 0.8f,
-    -0.8f,-0.8f, 0.8f,
-    -0.8f,-0.8f,-0.8f,
-    -0.8f, 0.8f, 0.8f,
-    -0.8f,-0.8f, 0.8f,
-    0.8f,-0.8f, 0.8f,
-    0.8f, 0.8f, 0.8f,
-    0.8f,-0.8f,-0.8f,
-    0.8f, 0.8f,-0.8f,
-    0.8f,-0.8f,-0.8f,
-    0.8f, 0.8f, 0.8f,
-    0.8f,-0.8f, 0.8f,
-    0.8f, 0.8f, 0.8f,
-    0.8f, 0.8f,-0.8f,
-    -0.8f, 0.8f,-0.8f,
-    0.8f, 0.8f, 0.8f,
-    -0.8f, 0.8f,-0.8f,
-    -0.8f, 0.8f, 0.8f,
-    0.8f, 0.8f, 0.8f,
-    -0.8f, 0.8f, 0.8f,
-    0.8f,-0.8f, 0.8f
-};
+    //Tableaux des vertices
+    GLfloat vertices[] = 
+    {
+        SCREEN_WIDTH/4, SCREEN_HEIGHT*3/4, 0.0, //Quad debut
+        SCREEN_WIDTH*3/4, SCREEN_HEIGHT*3/4, 0.0,
+        SCREEN_WIDTH*3/4, SCREEN_HEIGHT/4, 0.0, 
+        SCREEN_WIDTH/4, SCREEN_HEIGHT/4, 0.0 //Quad fin
+    };
+
+    glViewport(0.0f, 0.0f, SCREEN_WIDTH, SCREEN_HEIGHT);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(0, SCREEN_WIDTH, 0, SCREEN_HEIGHT, 0, 1);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
 
     while(!terminer)
     {
@@ -112,20 +94,16 @@ int main(int argc, char **argv)
 	    if(evenements.window.event == SDL_WINDOWEVENT_CLOSE)
 	        terminer = 1;
             
-
-        
+                    
         // Nettoyage de l'écran
         glClear(GL_COLOR_BUFFER_BIT);
 
         
-        //Affichage d'un triange
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, vertices);
-        glEnableVertexAttribArray(0);
-
-        glDrawArrays(GL_TRIANGLES, 0, 12*3);
-        
-        glDisableVertexAttribArray(0);
-
+        //Rendu OPENGL -> METTRE DU LE CODE OPENGL ICI
+        glEnableClientState(GL_VERTEX_ARRAY);
+        glVertexPointer(3, GL_FLOAT, 0, vertices);
+        glDrawArrays(GL_QUADS, 0, 4);
+        glDisableClientState(GL_VERTEX_ARRAY);
 
         // Actualisation de la fenêtre
         SDL_GL_SwapWindow(fenetre);

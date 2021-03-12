@@ -1,19 +1,15 @@
-vvr: MainMenu.o easySDL.o VVR.o SoloCircuitMenu.o SoloVoitureMenu.o
-	gcc -o ../bin/VroomVroomRacingMakeFile MainMenu.o SoloCircuitMenu.o SoloVoitureMenu.o easySDL.o VVR.o -I ../include -L ../lib -lmingw32 -lSDL2main -lSDL2 -lSDL2_mixer
+test: TestOpenGLGLFW.o RawModel.o Renderer.o list.o
+	gcc -o ../bin/testGLGLFW TestOpenGLGLFW.o RawModel.o Renderer.o list.o -I ../include -L ../lib -lmingw32 -lglew32 -lglfw3 -lgdi32 -lopengl32
 
-MainMenu.o: ../src/MainMenu.c
-	gcc -o MainMenu.o -c ../src/MainMenu.c -I ../include
+TestOpenGLGLFW.o: ../src/TestOpenGLGLFW.c
+	gcc -o TestOpenGLGLFW.o -c ../src/TestOpenGLGLFW.c -I ../include 
 
-SoloCircuitMenu.o: ../src/SoloCircuitMenu.c
-	gcc -o SoloCircuitMenu.o -c ../src/SoloCircuitMenu.c -I ../include
+RawModel.o: ../src/RawModel.c
+	gcc -o RawModel.o -c ../src/RawModel.c -I ../include 
 
-SoloVoitureMenu.o: ../src/SoloVoitureMenu.c
-	gcc -o SoloVoitureMenu.o -c ../src/SoloVoitureMenu.c -I ../include
+list.o: ../src/list.c
+	gcc -o list.o -c ../src/list.c -I ../include 
 
-easySDL.o: ../src/easySDL.c
-	gcc -o easySDL.o -c ../src/easySDL.c -I ../include
-
-VVR.o: ../src/VVR.c
-	gcc -o VVR.o -c ../src/VVR.c -I ../include
-
-
+Renderer.o: ../src/Renderer.c
+	gcc -o Renderer.o -c ../src/Renderer.c -I ../include 
+	
