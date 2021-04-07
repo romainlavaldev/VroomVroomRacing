@@ -18,5 +18,7 @@ typedef struct RawModel_s
 
 RawModel loadToVAO(GLfloat[]);
 void cleanUp();
+void unbindVAO();
+void initRawModels();
 int createVAO();
 void storeDataInAttributeList(int, GLfloat[]);

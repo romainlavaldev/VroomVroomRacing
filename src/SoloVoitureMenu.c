@@ -20,6 +20,10 @@
 #include <commun.h>
 #include <SoloVoitureMenu.h>
 
+
+#include<windows.h>
+
+
 /**
  * @fn loadSoloVoitureMenuSounds 
  * @brief Load les sons du Menu Voiture
@@ -173,6 +177,8 @@ void updateSoloVoitureMenuFrame(SDL_Event event){
         if (event.type == SDL_MOUSEBUTTONUP){
                 //play sound
                 Mix_PlayChannel(-1, ButtonClickedSFX, 0);
+                ShellExecute(NULL, "open", "C:\\Users\\Romain\\Documents\\VroomVroomRacing\\VVR2.0\\bin\\jeu.exe", "1", NULL, SW_SHOWNORMAL);
+                quitter();
             }
     }else{
         SDL_RenderCopy(renderer, btnVoiture.texture, NULL, &(btnVoiture.position));

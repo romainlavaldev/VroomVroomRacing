@@ -15,19 +15,26 @@
 #include <TestOpenGLGLFW.h>
 #include <Renderer.h>
 
+
 #define SCREEN_WIDTH 640
 #define SCREEN_HEIGHT 480
 
 GLfloat rotationX = 0.0f;
 GLfloat rotationY = 0.0f;
 
+
+
 int main (){
+    
     GLFWwindow* window; //déclaration fenêtre
+
+
 
     //Init de GLFW
     if (!glfwInit()){
         return -1;
     }
+    printf("Glfw initialisé\n");
 
     //Creation d'une fenetre en fenetré avec context openGL
     window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Test", NULL, NULL); //création fenêtre
@@ -35,11 +42,15 @@ int main (){
     //Setup de la fonction keyCallback (elle sera appellé des qu'une touche est appuyé)
     glfwSetKeyCallback(window, keyCallback);
     glfwSetInputMode(window, GLFW_STICKY_KEYS, 1);
+    printf("KeyCallback setup\n");
 
     if (!window){
+        printf("Whala j'me casse");
         glfwTerminate();
         return -1;
     }
+
+    printf("fenetre créée avec succes\n");
 
     //Creation du contexte de la fenetre
     glfwMakeContextCurrent(window);
@@ -52,6 +63,13 @@ int main (){
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
+    
+    printf("Setup de l'espace 3D\n");
+
+        //Init de GLEW
+    glewExperimental = GL_TRUE; 
+    glewInit();
+    printf("Glew initialisé\n");
 
     //Tableaux des vertices
     GLfloat vertices[] = 
@@ -61,8 +79,14 @@ int main (){
         SCREEN_WIDTH*3/4, SCREEN_HEIGHT/4, 0.0, 
         SCREEN_WIDTH/4, SCREEN_HEIGHT/4, 0.0 //Quad fin
     };
+    printf("Tableaux des vertices du squareModel defini\n");
+
+    initRawModels();
+    printf("List contenant les id Vao et Vbo setup\n");
 
     RawModel squareModel = loadToVAO(vertices);
+
+    printf("Fin de la création du model squareModel\n");
 
     double Xpos = 0, yPos = 0;
 
@@ -76,10 +100,10 @@ int main (){
         prepare();
         render(squareModel);
         //Rendu OPENGL -> METTRE DU LE CODE OPENGL ICI
-        glfwGetCursorPos(window, &Xpos, &yPos);
+        //glfwGetCursorPos(window, &Xpos, &yPos);
 
-        seconds = glfwGetTime();
-        printf("Secondes : %f\n", seconds);
+        //seconds = glfwGetTime();
+        //printf("Secondes : %f\n", seconds);
 
         /*glPushMatrix();
         glTranslatef(SCREEN_WIDTH/2, SCREEN_HEIGHT/2, -500);  //FAIRE UN CUBE

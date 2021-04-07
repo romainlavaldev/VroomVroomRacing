@@ -1,3 +1,16 @@
+/*************************************************************
+ *              Creation du Systeme de son 
+ * 
+ * 
+ * @file SoundSystem.c
+ * @author {Romain LAVAL, Nathan LABBE, Louis GEORGET}
+ * @date 12 Mars 2021
+ * @brief Creation du systeme de sonorites du jeu
+ * @version 1.0
+ * 
+ * ********************************************************* */
+
+
 #if defined(WIN32)
   #include <conio.h>
 #else

@@ -1,34 +1,36 @@
 #include <glfw3.h>
 
-typedef struct GLintElem {
-    GLint valeur ;
-    struct GLintElem* pred ;
-    struct GLintElem* succ ;
-} t_GLintElem;
+typedef struct GLuintElem {
+    GLuint valeur ;
+    struct GLuintElem* pred ;
+    struct GLuintElem* succ ;
+} t_GLuintElem;
 
 typedef struct{
-    t_GLintElem* drapeau;
-    t_GLintElem* ec;
-}t_GLintliste;
+    t_GLuintElem* drapeau;
+    t_GLuintElem* ec;
+}t_GLuintliste;
 
-void initListe(t_GLintliste* l);
+void initListe(t_GLuintliste* l);
 
-int listeVide(t_GLintliste* l);
+int listeVide(t_GLuintliste* l);
 
-void enFin(t_GLintliste* l);
+int horsListe(t_GLuintliste *l);
 
-void enDebut(t_GLintliste* l);
+void enFin(t_GLuintliste* l);
 
-void precedent(t_GLintliste* l);
+void enDebut(t_GLuintliste* l);
 
-void suivant(t_GLintliste* l);
+void precedent(t_GLuintliste* l);
 
-int valeurElt(t_GLintliste* l);
+void suivant(t_GLuintliste* l);
 
-void modifElt(t_GLintliste* l, GLint v);
+GLuint valeurElt(t_GLuintliste* l);
 
-void oterElt(t_GLintliste* l);
+void modifElt(t_GLuintliste* l, GLuint v);
 
-void ajoutDroit(t_GLintliste* l, GLint v);
+void oterElt(t_GLuintliste* l);
 
-void ajoutGauche(t_GLintliste* l, GLint v);
+void ajoutDroit(t_GLuintliste* l, GLuint v);
+
+void ajoutGauche(t_GLuintliste* l, GLuint v);

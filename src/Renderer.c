@@ -1,5 +1,5 @@
-#include <glfw3.h>
 #include <glew.h>
+#include <glfw3.h>
 #include <Renderer.h>
 
 /**
@@ -7,7 +7,7 @@
  * @brief Preparation rendu
  */
 
-void preparer(){
+void prepare(){
     glClear(GL_COLOR_BUFFER_BIT);
 }
 

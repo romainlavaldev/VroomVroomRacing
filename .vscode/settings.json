@@ -8,6 +8,7 @@
         "sdl_mixer.h": "c",
         "vvr.h": "c",
         "commun.h": "c",
-        "soundsystem.h": "c"
+        "soundsystem.h": "c",
+        "windows.h": "c"
     }
 }

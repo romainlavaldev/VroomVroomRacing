@@ -13,11 +13,12 @@
 #include <glew.h>
 #include <glfw3.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <RawModel.h>
 #include <list.h>
 
-t_GLintliste* vaos;
-t_GLintliste* vbos;
+t_GLuintliste* vaos;
+t_GLuintliste* vbos;
 
 void initRawModels(){
     initListe(vaos);
@@ -35,7 +36,7 @@ RawModel loadToVAO(GLfloat positions[]){
     int vaoID = createVAO();
     storeDataInAttributeList(0,positions);
     unbindVAO();
-    RawModel rm = {vaoID, len(positions)/3};
+    RawModel rm = {vaoID, sizeof(positions)/sizeof(GLfloat)/3};
     return rm;
 }
 
@@ -58,29 +59,16 @@ void cleanUp(){
  */
 
 int createVAO(){
-    GLint vaoID;
+    printf("\n---- Création d'un vao ----\n");
+    GLuint vaoID;
     glGenVertexArrays(1, &vaoID);
+    printf("Vao %i créaiy\n", vaoID);
+    printf("Liste VAO vide ? : %i\n", listeVide(vaos));
     ajoutDroit(vaos, vaoID);
+    printf("Vao %d ajouté à la liste des vaos\n", vaoID);
     glBindVertexArray(vaoID);
+    printf("Vao %d bindé (pret a l'update)\n", vaoID);
     return vaoID;
-}
-
-/**
- * @fn storeDataInAttributeList 
- * @brief Créer le VAO
- * @param int attributeNumber
- * @param GLfloat data[]
- * @return 
- */
-
-void storeDataInAttributeList(int attributeNumber, GLfloat data[]){
-    int vboID;
-    glGenBuffers(1, &vboID);
-    ajoutDroit(vbos, vboID);
-    glBindBuffer(GL_ARRAY_BUFFER, vboID);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(data), data, GL_STATIC_DRAW);
-    glVertexAttribPointer(attributeNumber, 3, GL_FLOAT, GL_FALSE, 0, 0);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
 /**
