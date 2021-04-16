@@ -12,13 +12,13 @@
  * ********************************************************* */
 
 #include <stdio.h>
-#include <SDL.h> 
-#include <SDL_mixer.h>
+#include <SDL/SDL.h> 
+#include <SDL/SDL_mixer.h>
 //! Introduit le dossier principal VVR
-#include <VVR.h>
+#include <SDL/VVR.h>
 //! récupère dossier commun
-#include <commun.h>
-#include <SoloVoitureMenu.h>
+#include <SDL/commun.h>
+#include <SDL/SoloVoitureMenu.h>
 
 
 #include<windows.h>
@@ -177,8 +177,11 @@ void updateSoloVoitureMenuFrame(SDL_Event event){
         if (event.type == SDL_MOUSEBUTTONUP){
                 //play sound
                 Mix_PlayChannel(-1, ButtonClickedSFX, 0);
-                ShellExecute(NULL, "open", "C:\\Users\\Romain\\Documents\\VroomVroomRacing\\VVR2.0\\bin\\jeu.exe", "1", NULL, SW_SHOWNORMAL);
                 quitter();
+                system("cd ..../bin/");
+                system("jeu.exe 1");
+                //ShellExecute(NULL, "open", "C:\\Users\\Romain\\Documents\\VroomVroomRacing\\VVR2.0\\bin\\jeu.exe", "1", NULL, SW_SHOWNORMAL);
+                //quitter();
             }
     }else{
         SDL_RenderCopy(renderer, btnVoiture.texture, NULL, &(btnVoiture.position));
