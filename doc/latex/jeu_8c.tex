@@ -1,0 +1,259 @@
+\hypertarget{jeu_8c}{}\doxysection{Référence du fichier jeu.\+c}
+\label{jeu_8c}\index{jeu.c@{jeu.c}}
+
+
+JEU (Enfin!)  
+
+
+{\ttfamily \#include $<$jeu.\+h$>$}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{jeu_8c_aa8d273aa236fd2516b8d12cdde588888}{enter\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Entrée dans le jeu, load des fonctionnalités de touche. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jeu_8c_ac8de9e38ce27c87f710dff42a13455cf}{restart}} ()
+\begin{DoxyCompactList}\small\item\em redemarre le jeu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jeu_8c_a8cbed361859014c070451b457274f5ea}{reload\+Level}} ()
+\item 
+void \mbox{\hyperlink{jeu_8c_a34aa41fa17f4c968d1b09b778394fa5f}{game\+Loop}} ()
+\begin{DoxyCompactList}\small\item\em Effectue la boucle de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jeu_8c_ad33e8867309a752cd30d04f99f3fa30c}{update\+Jeu}} ()
+\begin{DoxyCompactList}\small\item\em Effectue l\textquotesingle{}update du jeu, vérifie des conditions d\textquotesingle{}impact. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jeu_8c_a4375d53a90bf94ab4e7bc7ad25f39683}{compteur\+Render}} ()
+\begin{DoxyCompactList}\small\item\em Rendu du compteur Open\+GL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jeu_8c_a2daf90b863a84186f23e69bd2e17e425}{game\+Over\+Render}} ()
+\begin{DoxyCompactList}\small\item\em Rendu du game over Open\+GL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jeu_8c_aea9fe2212f409983e17aa2110359bcd6}{victoire\+Render}} ()
+\begin{DoxyCompactList}\small\item\em Rendu du victoire Open\+GL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jeu_8c_ad17182dc79ed4c9e53f4030f03602d9f}{jeu\+Special\+Key}} (int key, int x, int y)
+\item 
+void \mbox{\hyperlink{jeu_8c_a667a6b1d685fc8f6cb11808fc6571fe2}{jeu\+Special\+Key\+Up}} (int key, int x, int y)
+\item 
+void \mbox{\hyperlink{jeu_8c_a178e70edd08a179a81ed53753a6b78b0}{jeu\+Ascii\+Key}} (int key, int x, int y)
+\item 
+void \mbox{\hyperlink{jeu_8c_a487c328bb1ab07693170ca7edeb759d7}{jeu\+Mouse\+Move}} (int x, int y)
+\item 
+void \mbox{\hyperlink{jeu_8c_aeecff659ab0c6578142a74a4713b7ed9}{jeu\+Mouse\+Wheel}} (int button, int dir, int x, int y)
+\item 
+void \mbox{\hyperlink{jeu_8c_a25139814ec85e93682cc824cf9b14cef}{jeu\+Render}} ()
+\begin{DoxyCompactList}\small\item\em charge les textures du jeu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jeu_8c_a49068cd769feb35f4148cf555ae5ef48}{update\+Voiture\+Joueur}} ()
+\begin{DoxyCompactList}\small\item\em Modifie la voiture sur le terrain 3D. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jeu_8c_a416adaffcf112b5a539b8795ac5f1b5d}{update\+Objets}} ()
+\item 
+void \mbox{\hyperlink{jeu_8c_ac128b75085e6e4a7ad6d7c664f2f3d14}{change\+Camera}} (int x, int y)
+\item 
+void \mbox{\hyperlink{jeu_8c_aaccab52091ed56a3a4c5ded47970ed6a}{quitterjeu}} ()
+\begin{DoxyCompactList}\small\item\em quitte le jeu Open\+GL \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{jeu_8c_a705dd9c2e32e71934f083c7bc26bd2c6}{droite\+Gauche\+Key}} = 0
+\item 
+int \mbox{\hyperlink{jeu_8c_a0dd594008269826ead8790cc04f63e07}{avant\+Arriere\+Key}} = 0
+\item 
+int \mbox{\hyperlink{jeu_8c_ae9cddf81e837c674e5b2d962508a89ab}{current\+Obj}} = 0
+\item 
+float \mbox{\hyperlink{jeu_8c_a76777b356ab2a080225682528119c4fe}{position}}
+\item 
+int \mbox{\hyperlink{jeu_8c_a9608d03ff24f78a495447407587e870f}{game\+Over}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+JEU (Enfin!) 
+
+\begin{DoxyAuthor}{Auteur}
+\{Romain LAVAL, Nathan LABBE, Louis GEORGET\} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22 Mars 2021
+\end{DoxyDate}
+Fichier du jeu ! le jeu ouiou ! \begin{DoxyVersion}{Version}
+2.\+0
+\end{DoxyVersion}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{jeu_8c_ac128b75085e6e4a7ad6d7c664f2f3d14}\label{jeu_8c_ac128b75085e6e4a7ad6d7c664f2f3d14}} 
+\index{jeu.c@{jeu.c}!changeCamera@{changeCamera}}
+\index{changeCamera@{changeCamera}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{changeCamera()}{changeCamera()}}
+{\footnotesize\ttfamily void change\+Camera (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jeu_8c_a4375d53a90bf94ab4e7bc7ad25f39683}\label{jeu_8c_a4375d53a90bf94ab4e7bc7ad25f39683}} 
+\index{jeu.c@{jeu.c}!compteurRender@{compteurRender}}
+\index{compteurRender@{compteurRender}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{compteurRender()}{compteurRender()}}
+{\footnotesize\ttfamily compteur\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rendu du compteur Open\+GL. 
+
+\mbox{\Hypertarget{jeu_8c_aa8d273aa236fd2516b8d12cdde588888}\label{jeu_8c_aa8d273aa236fd2516b8d12cdde588888}} 
+\index{jeu.c@{jeu.c}!enterGame@{enterGame}}
+\index{enterGame@{enterGame}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{enterGame()}{enterGame()}}
+{\footnotesize\ttfamily enter\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Entrée dans le jeu, load des fonctionnalités de touche. 
+
+\mbox{\Hypertarget{jeu_8c_a34aa41fa17f4c968d1b09b778394fa5f}\label{jeu_8c_a34aa41fa17f4c968d1b09b778394fa5f}} 
+\index{jeu.c@{jeu.c}!gameLoop@{gameLoop}}
+\index{gameLoop@{gameLoop}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{gameLoop()}{gameLoop()}}
+{\footnotesize\ttfamily game\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Effectue la boucle de jeu. 
+
+\mbox{\Hypertarget{jeu_8c_a2daf90b863a84186f23e69bd2e17e425}\label{jeu_8c_a2daf90b863a84186f23e69bd2e17e425}} 
+\index{jeu.c@{jeu.c}!gameOverRender@{gameOverRender}}
+\index{gameOverRender@{gameOverRender}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{gameOverRender()}{gameOverRender()}}
+{\footnotesize\ttfamily game\+Over\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rendu du game over Open\+GL. 
+
+\mbox{\Hypertarget{jeu_8c_a178e70edd08a179a81ed53753a6b78b0}\label{jeu_8c_a178e70edd08a179a81ed53753a6b78b0}} 
+\index{jeu.c@{jeu.c}!jeuAsciiKey@{jeuAsciiKey}}
+\index{jeuAsciiKey@{jeuAsciiKey}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{jeuAsciiKey()}{jeuAsciiKey()}}
+{\footnotesize\ttfamily void jeu\+Ascii\+Key (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jeu_8c_a487c328bb1ab07693170ca7edeb759d7}\label{jeu_8c_a487c328bb1ab07693170ca7edeb759d7}} 
+\index{jeu.c@{jeu.c}!jeuMouseMove@{jeuMouseMove}}
+\index{jeuMouseMove@{jeuMouseMove}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{jeuMouseMove()}{jeuMouseMove()}}
+{\footnotesize\ttfamily void jeu\+Mouse\+Move (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jeu_8c_aeecff659ab0c6578142a74a4713b7ed9}\label{jeu_8c_aeecff659ab0c6578142a74a4713b7ed9}} 
+\index{jeu.c@{jeu.c}!jeuMouseWheel@{jeuMouseWheel}}
+\index{jeuMouseWheel@{jeuMouseWheel}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{jeuMouseWheel()}{jeuMouseWheel()}}
+{\footnotesize\ttfamily void jeu\+Mouse\+Wheel (\begin{DoxyParamCaption}\item[{int}]{button,  }\item[{int}]{dir,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jeu_8c_a25139814ec85e93682cc824cf9b14cef}\label{jeu_8c_a25139814ec85e93682cc824cf9b14cef}} 
+\index{jeu.c@{jeu.c}!jeuRender@{jeuRender}}
+\index{jeuRender@{jeuRender}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{jeuRender()}{jeuRender()}}
+{\footnotesize\ttfamily jeu\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+charge les textures du jeu 
+
+\mbox{\Hypertarget{jeu_8c_ad17182dc79ed4c9e53f4030f03602d9f}\label{jeu_8c_ad17182dc79ed4c9e53f4030f03602d9f}} 
+\index{jeu.c@{jeu.c}!jeuSpecialKey@{jeuSpecialKey}}
+\index{jeuSpecialKey@{jeuSpecialKey}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{jeuSpecialKey()}{jeuSpecialKey()}}
+{\footnotesize\ttfamily void jeu\+Special\+Key (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jeu_8c_a667a6b1d685fc8f6cb11808fc6571fe2}\label{jeu_8c_a667a6b1d685fc8f6cb11808fc6571fe2}} 
+\index{jeu.c@{jeu.c}!jeuSpecialKeyUp@{jeuSpecialKeyUp}}
+\index{jeuSpecialKeyUp@{jeuSpecialKeyUp}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{jeuSpecialKeyUp()}{jeuSpecialKeyUp()}}
+{\footnotesize\ttfamily void jeu\+Special\+Key\+Up (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jeu_8c_aaccab52091ed56a3a4c5ded47970ed6a}\label{jeu_8c_aaccab52091ed56a3a4c5ded47970ed6a}} 
+\index{jeu.c@{jeu.c}!quitterjeu@{quitterjeu}}
+\index{quitterjeu@{quitterjeu}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{quitterjeu()}{quitterjeu()}}
+{\footnotesize\ttfamily quitterjeu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+quitte le jeu Open\+GL 
+
+\mbox{\Hypertarget{jeu_8c_a8cbed361859014c070451b457274f5ea}\label{jeu_8c_a8cbed361859014c070451b457274f5ea}} 
+\index{jeu.c@{jeu.c}!reloadLevel@{reloadLevel}}
+\index{reloadLevel@{reloadLevel}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{reloadLevel()}{reloadLevel()}}
+{\footnotesize\ttfamily void reload\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jeu_8c_ac8de9e38ce27c87f710dff42a13455cf}\label{jeu_8c_ac8de9e38ce27c87f710dff42a13455cf}} 
+\index{jeu.c@{jeu.c}!restart@{restart}}
+\index{restart@{restart}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{restart()}{restart()}}
+{\footnotesize\ttfamily restart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+redemarre le jeu 
+
+\mbox{\Hypertarget{jeu_8c_ad33e8867309a752cd30d04f99f3fa30c}\label{jeu_8c_ad33e8867309a752cd30d04f99f3fa30c}} 
+\index{jeu.c@{jeu.c}!updateJeu@{updateJeu}}
+\index{updateJeu@{updateJeu}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{updateJeu()}{updateJeu()}}
+{\footnotesize\ttfamily update\+Jeu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Effectue l\textquotesingle{}update du jeu, vérifie des conditions d\textquotesingle{}impact. 
+
+\mbox{\Hypertarget{jeu_8c_a416adaffcf112b5a539b8795ac5f1b5d}\label{jeu_8c_a416adaffcf112b5a539b8795ac5f1b5d}} 
+\index{jeu.c@{jeu.c}!updateObjets@{updateObjets}}
+\index{updateObjets@{updateObjets}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{updateObjets()}{updateObjets()}}
+{\footnotesize\ttfamily void update\+Objets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jeu_8c_a49068cd769feb35f4148cf555ae5ef48}\label{jeu_8c_a49068cd769feb35f4148cf555ae5ef48}} 
+\index{jeu.c@{jeu.c}!updateVoitureJoueur@{updateVoitureJoueur}}
+\index{updateVoitureJoueur@{updateVoitureJoueur}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{updateVoitureJoueur()}{updateVoitureJoueur()}}
+{\footnotesize\ttfamily update\+Voiture\+Joueur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modifie la voiture sur le terrain 3D. 
+
+\mbox{\Hypertarget{jeu_8c_aea9fe2212f409983e17aa2110359bcd6}\label{jeu_8c_aea9fe2212f409983e17aa2110359bcd6}} 
+\index{jeu.c@{jeu.c}!victoireRender@{victoireRender}}
+\index{victoireRender@{victoireRender}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{victoireRender()}{victoireRender()}}
+{\footnotesize\ttfamily victoire\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rendu du victoire Open\+GL. 
+
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{jeu_8c_a0dd594008269826ead8790cc04f63e07}\label{jeu_8c_a0dd594008269826ead8790cc04f63e07}} 
+\index{jeu.c@{jeu.c}!avantArriereKey@{avantArriereKey}}
+\index{avantArriereKey@{avantArriereKey}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{avantArriereKey}{avantArriereKey}}
+{\footnotesize\ttfamily int avant\+Arriere\+Key = 0}
+
+\mbox{\Hypertarget{jeu_8c_ae9cddf81e837c674e5b2d962508a89ab}\label{jeu_8c_ae9cddf81e837c674e5b2d962508a89ab}} 
+\index{jeu.c@{jeu.c}!currentObj@{currentObj}}
+\index{currentObj@{currentObj}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{currentObj}{currentObj}}
+{\footnotesize\ttfamily int current\+Obj = 0}
+
+\mbox{\Hypertarget{jeu_8c_a705dd9c2e32e71934f083c7bc26bd2c6}\label{jeu_8c_a705dd9c2e32e71934f083c7bc26bd2c6}} 
+\index{jeu.c@{jeu.c}!droiteGaucheKey@{droiteGaucheKey}}
+\index{droiteGaucheKey@{droiteGaucheKey}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{droiteGaucheKey}{droiteGaucheKey}}
+{\footnotesize\ttfamily int droite\+Gauche\+Key = 0}
+
+\mbox{\Hypertarget{jeu_8c_a9608d03ff24f78a495447407587e870f}\label{jeu_8c_a9608d03ff24f78a495447407587e870f}} 
+\index{jeu.c@{jeu.c}!gameOver@{gameOver}}
+\index{gameOver@{gameOver}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{gameOver}{gameOver}}
+{\footnotesize\ttfamily int game\+Over = 0}
+
+\mbox{\Hypertarget{jeu_8c_a76777b356ab2a080225682528119c4fe}\label{jeu_8c_a76777b356ab2a080225682528119c4fe}} 
+\index{jeu.c@{jeu.c}!position@{position}}
+\index{position@{position}!jeu.c@{jeu.c}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily float position}
+

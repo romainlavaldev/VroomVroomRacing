@@ -1,25 +1,22 @@
 \hypertarget{_v_v_r_8c}{}\doxysection{Référence du fichier VVR.\+c}
 \label{_v_v_r_8c}\index{VVR.c@{VVR.c}}
-
-
-Main Window.  
-
-
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$time.\+h$>$}\newline
-{\ttfamily \#include $<$SDL.\+h$>$}\newline
-{\ttfamily \#include $<$easy\+SDL.\+h$>$}\newline
-{\ttfamily \#include $<$VVR.\+h$>$}\newline
-{\ttfamily \#include $<$commun.\+h$>$}\newline
-{\ttfamily \#include $<$Main\+Menu.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/\+SDL\+\_\+mixer.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/easy\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/\+VVR.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/\+Main\+Menu.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/\+Solo\+Circuit\+Menu.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/\+Solo\+Voiture\+Menu.\+h$>$}\newline
 \doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{_v_v_r_8c_a77c7b146a8167dfa09ce4ba284dd853d}{quitter}} ()
+\begin{DoxyCompactList}\small\item\em Bouton quitter le jeu. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{_v_v_r_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
-\item 
-void \mbox{\hyperlink{_v_v_r_8c_a984049078b71eba9bfa968627bc7d2ec}{quitter}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -30,26 +27,19 @@ SDL\+\_\+\+Renderer $\ast$ \mbox{\hyperlink{_v_v_r_8c_a966da7a60c4ea3ba301e26ccc
 \item 
 SDL\+\_\+\+Event \mbox{\hyperlink{_v_v_r_8c_a6b57f01d3c576db5368dd0efc2f435a4}{event}}
 \item 
-int \mbox{\hyperlink{_v_v_r_8c_a2f45113638a0b749a8a205d2cd7fb42b}{running}} = true
+int \mbox{\hyperlink{_v_v_r_8c_a2f45113638a0b749a8a205d2cd7fb42b}{running}} = 1
 \item 
-int \mbox{\hyperlink{_v_v_r_8c_a1b521f780ffd7bda3de31028eeaccff0}{left\+Mouse\+Down}} = false
+int \mbox{\hyperlink{_v_v_r_8c_a1b521f780ffd7bda3de31028eeaccff0}{left\+Mouse\+Down}} = 0
+\item 
+Mix\+\_\+\+Chunk $\ast$ \mbox{\hyperlink{_v_v_r_8c_a92c9d2f6a38a817af6a7a03903544de6}{Button\+Hover\+SFX}}
+\item 
+Mix\+\_\+\+Chunk $\ast$ \mbox{\hyperlink{_v_v_r_8c_a7acd0d14c295262ca4514ff226c8f6a2}{Button\+Clicked\+SFX}}
+\item 
+Mix\+\_\+\+Chunk $\ast$ \mbox{\hyperlink{_v_v_r_8c_ad796234c24d0061adbff7db6694532e8}{Button\+Back\+SFX}}
+\item 
+int \mbox{\hyperlink{_v_v_r_8c_aa2e8a60320c41cfe288940840d254e4a}{Active\+Menu}} = 1
 \end{DoxyCompactItemize}
 
-
-\doxysubsection{Description détaillée}
-Main Window. 
-
-\begin{DoxyAuthor}{Auteur}
-\{Romain LAVAL, Nathan LABBE, Louis GEORGET\} 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Date}
-25 Janvier 2021
-\end{DoxyDate}
-Programme principal du jeu \begin{DoxyVersion}{Version}
-1.\+0
-\end{DoxyVersion}
-\DoxyHorRuler{0}
- 
 
 \doxysubsection{Documentation des fonctions}
 \mbox{\Hypertarget{_v_v_r_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{_v_v_r_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
@@ -58,15 +48,43 @@ Programme principal du jeu \begin{DoxyVersion}{Version}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{_v_v_r_8c_a984049078b71eba9bfa968627bc7d2ec}\label{_v_v_r_8c_a984049078b71eba9bfa968627bc7d2ec}} 
+\mbox{\Hypertarget{_v_v_r_8c_a77c7b146a8167dfa09ce4ba284dd853d}\label{_v_v_r_8c_a77c7b146a8167dfa09ce4ba284dd853d}} 
 \index{VVR.c@{VVR.c}!quitter@{quitter}}
 \index{quitter@{quitter}!VVR.c@{VVR.c}}
 \doxysubsubsection{\texorpdfstring{quitter()}{quitter()}}
-{\footnotesize\ttfamily void quitter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily quitter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Bouton quitter le jeu. 
 
 
 
 \doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{_v_v_r_8c_aa2e8a60320c41cfe288940840d254e4a}\label{_v_v_r_8c_aa2e8a60320c41cfe288940840d254e4a}} 
+\index{VVR.c@{VVR.c}!ActiveMenu@{ActiveMenu}}
+\index{ActiveMenu@{ActiveMenu}!VVR.c@{VVR.c}}
+\doxysubsubsection{\texorpdfstring{ActiveMenu}{ActiveMenu}}
+{\footnotesize\ttfamily int Active\+Menu = 1}
+
+\mbox{\Hypertarget{_v_v_r_8c_ad796234c24d0061adbff7db6694532e8}\label{_v_v_r_8c_ad796234c24d0061adbff7db6694532e8}} 
+\index{VVR.c@{VVR.c}!ButtonBackSFX@{ButtonBackSFX}}
+\index{ButtonBackSFX@{ButtonBackSFX}!VVR.c@{VVR.c}}
+\doxysubsubsection{\texorpdfstring{ButtonBackSFX}{ButtonBackSFX}}
+{\footnotesize\ttfamily Mix\+\_\+\+Chunk$\ast$ Button\+Back\+SFX}
+
+\mbox{\Hypertarget{_v_v_r_8c_a7acd0d14c295262ca4514ff226c8f6a2}\label{_v_v_r_8c_a7acd0d14c295262ca4514ff226c8f6a2}} 
+\index{VVR.c@{VVR.c}!ButtonClickedSFX@{ButtonClickedSFX}}
+\index{ButtonClickedSFX@{ButtonClickedSFX}!VVR.c@{VVR.c}}
+\doxysubsubsection{\texorpdfstring{ButtonClickedSFX}{ButtonClickedSFX}}
+{\footnotesize\ttfamily Mix\+\_\+\+Chunk$\ast$ Button\+Clicked\+SFX}
+
+\mbox{\Hypertarget{_v_v_r_8c_a92c9d2f6a38a817af6a7a03903544de6}\label{_v_v_r_8c_a92c9d2f6a38a817af6a7a03903544de6}} 
+\index{VVR.c@{VVR.c}!ButtonHoverSFX@{ButtonHoverSFX}}
+\index{ButtonHoverSFX@{ButtonHoverSFX}!VVR.c@{VVR.c}}
+\doxysubsubsection{\texorpdfstring{ButtonHoverSFX}{ButtonHoverSFX}}
+{\footnotesize\ttfamily Mix\+\_\+\+Chunk$\ast$ Button\+Hover\+SFX}
+
 \mbox{\Hypertarget{_v_v_r_8c_a6b57f01d3c576db5368dd0efc2f435a4}\label{_v_v_r_8c_a6b57f01d3c576db5368dd0efc2f435a4}} 
 \index{VVR.c@{VVR.c}!event@{event}}
 \index{event@{event}!VVR.c@{VVR.c}}
@@ -83,7 +101,7 @@ Programme principal du jeu \begin{DoxyVersion}{Version}
 \index{VVR.c@{VVR.c}!leftMouseDown@{leftMouseDown}}
 \index{leftMouseDown@{leftMouseDown}!VVR.c@{VVR.c}}
 \doxysubsubsection{\texorpdfstring{leftMouseDown}{leftMouseDown}}
-{\footnotesize\ttfamily int left\+Mouse\+Down = false}
+{\footnotesize\ttfamily int left\+Mouse\+Down = 0}
 
 \mbox{\Hypertarget{_v_v_r_8c_a966da7a60c4ea3ba301e26ccc5efe452}\label{_v_v_r_8c_a966da7a60c4ea3ba301e26ccc5efe452}} 
 \index{VVR.c@{VVR.c}!renderer@{renderer}}
@@ -95,5 +113,5 @@ Programme principal du jeu \begin{DoxyVersion}{Version}
 \index{VVR.c@{VVR.c}!running@{running}}
 \index{running@{running}!VVR.c@{VVR.c}}
 \doxysubsubsection{\texorpdfstring{running}{running}}
-{\footnotesize\ttfamily int running = true}
+{\footnotesize\ttfamily int running = 1}
 

@@ -1,0 +1,108 @@
+\hypertarget{_raw_model_8c}{}\doxysection{Référence du fichier Raw\+Model.\+c}
+\label{_raw_model_8c}\index{RawModel.c@{RawModel.c}}
+
+
+Creation de Modele.  
+
+
+{\ttfamily \#include $<$glew.\+h$>$}\newline
+{\ttfamily \#include $<$glfw3.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$Raw\+Model.\+h$>$}\newline
+{\ttfamily \#include $<$list.\+h$>$}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_raw_model_8c_a37aaf6dfe2ab7ca45f4cc61324bedefc}{init\+Raw\+Models}} ()
+\item 
+Raw\+Model \mbox{\hyperlink{_raw_model_8c_a90c71995d74018c504f1551861fbfce9}{load\+To\+VAO}} (GLfloat positions\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{_raw_model_8c_ae900b054a1598c54acaa67902f87185d}{clean\+Up}} ()
+\item 
+int \mbox{\hyperlink{_raw_model_8c_a7076de168f6ef8830208abca1f6c46f8}{create\+VAO}} ()
+\begin{DoxyCompactList}\small\item\em Créer le VAO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_raw_model_8c_a1fe3555c9e29a9876b31bc8097d5d14b}{unbind\+VAO}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+t\+\_\+\+GLuintliste $\ast$ \mbox{\hyperlink{_raw_model_8c_afce081d99cfc7c0cfc03fb2c94436741}{vaos}}
+\item 
+t\+\_\+\+GLuintliste $\ast$ \mbox{\hyperlink{_raw_model_8c_a927e486a78fcfc3d5fdaf2045311277f}{vbos}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Creation de Modele. 
+
+\begin{DoxyAuthor}{Auteur}
+\{Romain LAVAL, Nathan LABBE, Louis GEORGET\} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12 Mars 2021
+\end{DoxyDate}
+Creation des modeles raw VAO du jeu \begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{_raw_model_8c_ae900b054a1598c54acaa67902f87185d}\label{_raw_model_8c_ae900b054a1598c54acaa67902f87185d}} 
+\index{RawModel.c@{RawModel.c}!cleanUp@{cleanUp}}
+\index{cleanUp@{cleanUp}!RawModel.c@{RawModel.c}}
+\doxysubsubsection{\texorpdfstring{cleanUp()}{cleanUp()}}
+{\footnotesize\ttfamily void clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_raw_model_8c_a7076de168f6ef8830208abca1f6c46f8}\label{_raw_model_8c_a7076de168f6ef8830208abca1f6c46f8}} 
+\index{RawModel.c@{RawModel.c}!createVAO@{createVAO}}
+\index{createVAO@{createVAO}!RawModel.c@{RawModel.c}}
+\doxysubsubsection{\texorpdfstring{createVAO()}{createVAO()}}
+{\footnotesize\ttfamily create\+VAO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Créer le VAO. 
+
+\begin{DoxyReturn}{Renvoie}
+vao\+ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_raw_model_8c_a37aaf6dfe2ab7ca45f4cc61324bedefc}\label{_raw_model_8c_a37aaf6dfe2ab7ca45f4cc61324bedefc}} 
+\index{RawModel.c@{RawModel.c}!initRawModels@{initRawModels}}
+\index{initRawModels@{initRawModels}!RawModel.c@{RawModel.c}}
+\doxysubsubsection{\texorpdfstring{initRawModels()}{initRawModels()}}
+{\footnotesize\ttfamily void init\+Raw\+Models (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_raw_model_8c_a90c71995d74018c504f1551861fbfce9}\label{_raw_model_8c_a90c71995d74018c504f1551861fbfce9}} 
+\index{RawModel.c@{RawModel.c}!loadToVAO@{loadToVAO}}
+\index{loadToVAO@{loadToVAO}!RawModel.c@{RawModel.c}}
+\doxysubsubsection{\texorpdfstring{loadToVAO()}{loadToVAO()}}
+{\footnotesize\ttfamily Raw\+Model load\+To\+VAO (\begin{DoxyParamCaption}\item[{GLfloat}]{positions\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_raw_model_8c_a1fe3555c9e29a9876b31bc8097d5d14b}\label{_raw_model_8c_a1fe3555c9e29a9876b31bc8097d5d14b}} 
+\index{RawModel.c@{RawModel.c}!unbindVAO@{unbindVAO}}
+\index{unbindVAO@{unbindVAO}!RawModel.c@{RawModel.c}}
+\doxysubsubsection{\texorpdfstring{unbindVAO()}{unbindVAO()}}
+{\footnotesize\ttfamily unbind\+VAO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{_raw_model_8c_afce081d99cfc7c0cfc03fb2c94436741}\label{_raw_model_8c_afce081d99cfc7c0cfc03fb2c94436741}} 
+\index{RawModel.c@{RawModel.c}!vaos@{vaos}}
+\index{vaos@{vaos}!RawModel.c@{RawModel.c}}
+\doxysubsubsection{\texorpdfstring{vaos}{vaos}}
+{\footnotesize\ttfamily t\+\_\+\+GLuintliste$\ast$ vaos}
+
+\mbox{\Hypertarget{_raw_model_8c_a927e486a78fcfc3d5fdaf2045311277f}\label{_raw_model_8c_a927e486a78fcfc3d5fdaf2045311277f}} 
+\index{RawModel.c@{RawModel.c}!vbos@{vbos}}
+\index{vbos@{vbos}!RawModel.c@{RawModel.c}}
+\doxysubsubsection{\texorpdfstring{vbos}{vbos}}
+{\footnotesize\ttfamily t\+\_\+\+GLuintliste$\ast$ vbos}
+

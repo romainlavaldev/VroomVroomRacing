@@ -1,0 +1,175 @@
+\hypertarget{_solo_voiture_menu_8c}{}\doxysection{Référence du fichier Solo\+Voiture\+Menu.\+c}
+\label{_solo_voiture_menu_8c}\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+
+
+Fenêtre d\textquotesingle{}ouverture.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/\+SDL\+\_\+mixer.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/\+VVR.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/commun.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/\+Solo\+Voiture\+Menu.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_solo_voiture_menu_8c_a353cfc860d8bc13a25d1e7a0157050bf}{load\+Solo\+Voiture\+Menu\+Sounds}} ()
+\begin{DoxyCompactList}\small\item\em Introduit le dossier principal VVR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_solo_voiture_menu_8c_a9dbe99cd46e1c6cd28cc3fc40d3a7e76}{load\+Solo\+Voiture\+Menu\+Images}} ()
+\begin{DoxyCompactList}\small\item\em Load les images du Menu Voiture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_solo_voiture_menu_8c_ab0858d3ae08487f5d89d5d708f3290d2}{load\+Solo\+Voiture\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Load les les fonctiones du main menu (Images,sons, et demarrage) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_solo_voiture_menu_8c_aebdd8f80c9dd06321bbbf6230cac5f8c}{destroy\+Voiture\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Destruction de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_solo_voiture_menu_8c_a6f94ba27fa5617c8e5654b839f0db60e}{update\+Solo\+Voiture\+Menu\+Frame}} (SDL\+\_\+\+Event \mbox{\hyperlink{_v_v_r_8c_a6b57f01d3c576db5368dd0efc2f435a4}{event}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+image\+\_\+t \mbox{\hyperlink{_solo_voiture_menu_8c_a56d72846bdf42a5f970c2696c0bd99f3}{Solo\+Voiture\+BG}}
+\begin{DoxyCompactList}\small\item\em Définition des boutons de la main window. \end{DoxyCompactList}\item 
+image\+\_\+t \mbox{\hyperlink{_solo_voiture_menu_8c_a153f4a1ef8364976c7aa92f949981c15}{btn\+Voiture}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_solo_voiture_menu_8c_a35a7b9b837a6c98c4e9965f7801a83d9}{btn\+VoitureH}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_solo_voiture_menu_8c_afb79927bdf36519073c2cdf935347742}{btn\+VoitureC}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_solo_voiture_menu_8c_ac62da6864318813af2f9fa6ca13c247d}{btn\+Voiture\+Retour}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_solo_voiture_menu_8c_a781780f4393c47240230f1c82b09b286}{btn\+Voiture\+RetourH}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_solo_voiture_menu_8c_a37fa6e4505d8b70c9cff25dfe3be3b1b}{btn\+Voiture\+RetourC}}
+\item 
+int \mbox{\hyperlink{_solo_voiture_menu_8c_a7824955d0da82e97d81a2e372fb71409}{on\+Button\+Voiture}} = false
+\item 
+int \mbox{\hyperlink{_solo_voiture_menu_8c_a5d900679aadfabb00d4b0107f42bc754}{on\+Button\+Voiture\+Retour}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fenêtre d\textquotesingle{}ouverture. 
+
+\begin{DoxyAuthor}{Auteur}
+\{Romain LAVAL, Nathan LABBE, Louis GEORGET\} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11 Mars 2021
+\end{DoxyDate}
+Menu des voitures \begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{_solo_voiture_menu_8c_aebdd8f80c9dd06321bbbf6230cac5f8c}\label{_solo_voiture_menu_8c_aebdd8f80c9dd06321bbbf6230cac5f8c}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!destroyVoitureMenu@{destroyVoitureMenu}}
+\index{destroyVoitureMenu@{destroyVoitureMenu}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{destroyVoitureMenu()}{destroyVoitureMenu()}}
+{\footnotesize\ttfamily destroy\+Voiture\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruction de la fenêtre. 
+
+\mbox{\Hypertarget{_solo_voiture_menu_8c_ab0858d3ae08487f5d89d5d708f3290d2}\label{_solo_voiture_menu_8c_ab0858d3ae08487f5d89d5d708f3290d2}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!loadSoloVoitureMenu@{loadSoloVoitureMenu}}
+\index{loadSoloVoitureMenu@{loadSoloVoitureMenu}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{loadSoloVoitureMenu()}{loadSoloVoitureMenu()}}
+{\footnotesize\ttfamily load\+Solo\+Voiture\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load les les fonctiones du main menu (Images,sons, et demarrage) 
+
+\mbox{\Hypertarget{_solo_voiture_menu_8c_a9dbe99cd46e1c6cd28cc3fc40d3a7e76}\label{_solo_voiture_menu_8c_a9dbe99cd46e1c6cd28cc3fc40d3a7e76}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!loadSoloVoitureMenuImages@{loadSoloVoitureMenuImages}}
+\index{loadSoloVoitureMenuImages@{loadSoloVoitureMenuImages}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{loadSoloVoitureMenuImages()}{loadSoloVoitureMenuImages()}}
+{\footnotesize\ttfamily load\+Solo\+Voiture\+Menu\+Images (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load les images du Menu Voiture. 
+
+\mbox{\Hypertarget{_solo_voiture_menu_8c_a353cfc860d8bc13a25d1e7a0157050bf}\label{_solo_voiture_menu_8c_a353cfc860d8bc13a25d1e7a0157050bf}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!loadSoloVoitureMenuSounds@{loadSoloVoitureMenuSounds}}
+\index{loadSoloVoitureMenuSounds@{loadSoloVoitureMenuSounds}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{loadSoloVoitureMenuSounds()}{loadSoloVoitureMenuSounds()}}
+{\footnotesize\ttfamily load\+Solo\+Voiture\+Menu\+Sounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Introduit le dossier principal VVR. 
+
+récupère dossier commun
+
+Load les sons du Menu Voiture \mbox{\Hypertarget{_solo_voiture_menu_8c_a6f94ba27fa5617c8e5654b839f0db60e}\label{_solo_voiture_menu_8c_a6f94ba27fa5617c8e5654b839f0db60e}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!updateSoloVoitureMenuFrame@{updateSoloVoitureMenuFrame}}
+\index{updateSoloVoitureMenuFrame@{updateSoloVoitureMenuFrame}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{updateSoloVoitureMenuFrame()}{updateSoloVoitureMenuFrame()}}
+{\footnotesize\ttfamily void update\+Solo\+Voiture\+Menu\+Frame (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event}]{event }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{_solo_voiture_menu_8c_a153f4a1ef8364976c7aa92f949981c15}\label{_solo_voiture_menu_8c_a153f4a1ef8364976c7aa92f949981c15}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!btnVoiture@{btnVoiture}}
+\index{btnVoiture@{btnVoiture}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnVoiture}{btnVoiture}}
+{\footnotesize\ttfamily image\+\_\+t btn\+Voiture}
+
+\mbox{\Hypertarget{_solo_voiture_menu_8c_afb79927bdf36519073c2cdf935347742}\label{_solo_voiture_menu_8c_afb79927bdf36519073c2cdf935347742}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!btnVoitureC@{btnVoitureC}}
+\index{btnVoitureC@{btnVoitureC}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnVoitureC}{btnVoitureC}}
+{\footnotesize\ttfamily image\+\_\+t btn\+VoitureC}
+
+\mbox{\Hypertarget{_solo_voiture_menu_8c_a35a7b9b837a6c98c4e9965f7801a83d9}\label{_solo_voiture_menu_8c_a35a7b9b837a6c98c4e9965f7801a83d9}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!btnVoitureH@{btnVoitureH}}
+\index{btnVoitureH@{btnVoitureH}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnVoitureH}{btnVoitureH}}
+{\footnotesize\ttfamily image\+\_\+t btn\+VoitureH}
+
+\mbox{\Hypertarget{_solo_voiture_menu_8c_ac62da6864318813af2f9fa6ca13c247d}\label{_solo_voiture_menu_8c_ac62da6864318813af2f9fa6ca13c247d}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!btnVoitureRetour@{btnVoitureRetour}}
+\index{btnVoitureRetour@{btnVoitureRetour}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnVoitureRetour}{btnVoitureRetour}}
+{\footnotesize\ttfamily image\+\_\+t btn\+Voiture\+Retour}
+
+\mbox{\Hypertarget{_solo_voiture_menu_8c_a37fa6e4505d8b70c9cff25dfe3be3b1b}\label{_solo_voiture_menu_8c_a37fa6e4505d8b70c9cff25dfe3be3b1b}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!btnVoitureRetourC@{btnVoitureRetourC}}
+\index{btnVoitureRetourC@{btnVoitureRetourC}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnVoitureRetourC}{btnVoitureRetourC}}
+{\footnotesize\ttfamily image\+\_\+t btn\+Voiture\+RetourC}
+
+\mbox{\Hypertarget{_solo_voiture_menu_8c_a781780f4393c47240230f1c82b09b286}\label{_solo_voiture_menu_8c_a781780f4393c47240230f1c82b09b286}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!btnVoitureRetourH@{btnVoitureRetourH}}
+\index{btnVoitureRetourH@{btnVoitureRetourH}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnVoitureRetourH}{btnVoitureRetourH}}
+{\footnotesize\ttfamily image\+\_\+t btn\+Voiture\+RetourH}
+
+\mbox{\Hypertarget{_solo_voiture_menu_8c_a7824955d0da82e97d81a2e372fb71409}\label{_solo_voiture_menu_8c_a7824955d0da82e97d81a2e372fb71409}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!onButtonVoiture@{onButtonVoiture}}
+\index{onButtonVoiture@{onButtonVoiture}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{onButtonVoiture}{onButtonVoiture}}
+{\footnotesize\ttfamily int on\+Button\+Voiture = false}
+
+\mbox{\Hypertarget{_solo_voiture_menu_8c_a5d900679aadfabb00d4b0107f42bc754}\label{_solo_voiture_menu_8c_a5d900679aadfabb00d4b0107f42bc754}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!onButtonVoitureRetour@{onButtonVoitureRetour}}
+\index{onButtonVoitureRetour@{onButtonVoitureRetour}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{onButtonVoitureRetour}{onButtonVoitureRetour}}
+{\footnotesize\ttfamily int on\+Button\+Voiture\+Retour = false}
+
+\mbox{\Hypertarget{_solo_voiture_menu_8c_a56d72846bdf42a5f970c2696c0bd99f3}\label{_solo_voiture_menu_8c_a56d72846bdf42a5f970c2696c0bd99f3}} 
+\index{SoloVoitureMenu.c@{SoloVoitureMenu.c}!SoloVoitureBG@{SoloVoitureBG}}
+\index{SoloVoitureBG@{SoloVoitureBG}!SoloVoitureMenu.c@{SoloVoitureMenu.c}}
+\doxysubsubsection{\texorpdfstring{SoloVoitureBG}{SoloVoitureBG}}
+{\footnotesize\ttfamily image\+\_\+t Solo\+Voiture\+BG}
+
+
+
+Définition des boutons de la main window. 
+

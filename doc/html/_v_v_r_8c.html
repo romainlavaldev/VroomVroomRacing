@@ -69,25 +69,25 @@ $(function() {
 <div class="title">Référence du fichier VVR.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Main Window.  
-<a href="#details">Plus de détails...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
-<code>#include &lt;SDL.h&gt;</code><br />
-<code>#include &lt;easySDL.h&gt;</code><br />
-<code>#include &lt;VVR.h&gt;</code><br />
-<code>#include &lt;commun.h&gt;</code><br />
-<code>#include &lt;MainMenu.h&gt;</code><br />
+<code>#include &lt;SDL/SDL.h&gt;</code><br />
+<code>#include &lt;SDL/SDL_mixer.h&gt;</code><br />
+<code>#include &lt;SDL/easySDL.h&gt;</code><br />
+<code>#include &lt;SDL/VVR.h&gt;</code><br />
+<code>#include &lt;SDL/MainMenu.h&gt;</code><br />
+<code>#include &lt;SDL/SoloCircuitMenu.h&gt;</code><br />
+<code>#include &lt;SDL/SoloVoitureMenu.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
+<tr class="memitem:a77c7b146a8167dfa09ce4ba284dd853d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_v_r_8c.html#a77c7b146a8167dfa09ce4ba284dd853d">quitter</a> ()</td></tr>
+<tr class="memdesc:a77c7b146a8167dfa09ce4ba284dd853d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bouton quitter le jeu.  <a href="_v_v_r_8c.html#a77c7b146a8167dfa09ce4ba284dd853d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a77c7b146a8167dfa09ce4ba284dd853d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_v_r_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a984049078b71eba9bfa968627bc7d2ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_v_r_8c.html#a984049078b71eba9bfa968627bc7d2ec">quitter</a> ()</td></tr>
-<tr class="separator:a984049078b71eba9bfa968627bc7d2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -97,18 +97,20 @@ Variables</h2></td></tr>
 <tr class="separator:a966da7a60c4ea3ba301e26ccc5efe452"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b57f01d3c576db5368dd0efc2f435a4"><td class="memItemLeft" align="right" valign="top">SDL_Event&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_v_r_8c.html#a6b57f01d3c576db5368dd0efc2f435a4">event</a></td></tr>
 <tr class="separator:a6b57f01d3c576db5368dd0efc2f435a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f45113638a0b749a8a205d2cd7fb42b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_v_r_8c.html#a2f45113638a0b749a8a205d2cd7fb42b">running</a> = true</td></tr>
+<tr class="memitem:a2f45113638a0b749a8a205d2cd7fb42b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_v_r_8c.html#a2f45113638a0b749a8a205d2cd7fb42b">running</a> = 1</td></tr>
 <tr class="separator:a2f45113638a0b749a8a205d2cd7fb42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b521f780ffd7bda3de31028eeaccff0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_v_r_8c.html#a1b521f780ffd7bda3de31028eeaccff0">leftMouseDown</a> = false</td></tr>
+<tr class="memitem:a1b521f780ffd7bda3de31028eeaccff0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_v_r_8c.html#a1b521f780ffd7bda3de31028eeaccff0">leftMouseDown</a> = 0</td></tr>
 <tr class="separator:a1b521f780ffd7bda3de31028eeaccff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c9d2f6a38a817af6a7a03903544de6"><td class="memItemLeft" align="right" valign="top">Mix_Chunk *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_v_r_8c.html#a92c9d2f6a38a817af6a7a03903544de6">ButtonHoverSFX</a></td></tr>
+<tr class="separator:a92c9d2f6a38a817af6a7a03903544de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acd0d14c295262ca4514ff226c8f6a2"><td class="memItemLeft" align="right" valign="top">Mix_Chunk *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_v_r_8c.html#a7acd0d14c295262ca4514ff226c8f6a2">ButtonClickedSFX</a></td></tr>
+<tr class="separator:a7acd0d14c295262ca4514ff226c8f6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad796234c24d0061adbff7db6694532e8"><td class="memItemLeft" align="right" valign="top">Mix_Chunk *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_v_r_8c.html#ad796234c24d0061adbff7db6694532e8">ButtonBackSFX</a></td></tr>
+<tr class="separator:ad796234c24d0061adbff7db6694532e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e8a60320c41cfe288940840d254e4a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_v_r_8c.html#aa2e8a60320c41cfe288940840d254e4a">ActiveMenu</a> = 1</td></tr>
+<tr class="separator:aa2e8a60320c41cfe288940840d254e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Main Window. </p>
-<dl class="section author"><dt>Auteur</dt><dd>{Romain LAVAL, Nathan LABBE, Louis GEORGET} </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>25 Janvier 2021</dd></dl>
-<p>Programme principal du jeu </p><dl class="section version"><dt>Version</dt><dd>1.0</dd></dl>
-<hr  />
- </div><h2 class="groupheader">Documentation des fonctions</h2>
+<h2 class="groupheader">Documentation des fonctions</h2>
 <a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -137,14 +139,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a984049078b71eba9bfa968627bc7d2ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a984049078b71eba9bfa968627bc7d2ec">&#9670;&nbsp;</a></span>quitter()</h2>
+<a id="a77c7b146a8167dfa09ce4ba284dd853d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77c7b146a8167dfa09ce4ba284dd853d">&#9670;&nbsp;</a></span>quitter()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void quitter </td>
+          <td class="memname">quitter </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -152,9 +154,67 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Bouton quitter le jeu. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Documentation des variables</h2>
+<a id="aa2e8a60320c41cfe288940840d254e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e8a60320c41cfe288940840d254e4a">&#9670;&nbsp;</a></span>ActiveMenu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ActiveMenu = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad796234c24d0061adbff7db6694532e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad796234c24d0061adbff7db6694532e8">&#9670;&nbsp;</a></span>ButtonBackSFX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mix_Chunk* ButtonBackSFX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7acd0d14c295262ca4514ff226c8f6a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7acd0d14c295262ca4514ff226c8f6a2">&#9670;&nbsp;</a></span>ButtonClickedSFX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mix_Chunk* ButtonClickedSFX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92c9d2f6a38a817af6a7a03903544de6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92c9d2f6a38a817af6a7a03903544de6">&#9670;&nbsp;</a></span>ButtonHoverSFX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mix_Chunk* ButtonHoverSFX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6b57f01d3c576db5368dd0efc2f435a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b57f01d3c576db5368dd0efc2f435a4">&#9670;&nbsp;</a></span>event</h2>
 
@@ -190,7 +250,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int leftMouseDown = false</td>
+          <td class="memname">int leftMouseDown = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -218,7 +278,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int running = true</td>
+          <td class="memname">int running = 1</td>
         </tr>
       </table>
 </div><div class="memdoc">

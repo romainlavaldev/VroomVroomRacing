@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['main_48',['main',['../main_menu_test_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;mainMenuTest.c'],['../test_s_d_l_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;testSDL.c'],['../_v_v_r_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;VVR.c']]]
+  ['endebut_233',['enDebut',['../list_8c.html#ad20a5934300285e4c1bd4877e802ee44',1,'list.c']]],
+  ['enfin_234',['enFin',['../list_8c.html#a0da8b7fae17c7212bb25258d2ee26729',1,'list.c']]],
+  ['entergame_235',['enterGame',['../jeu_8c.html#aa8d273aa236fd2516b8d12cdde588888',1,'jeu.c']]]
 ];

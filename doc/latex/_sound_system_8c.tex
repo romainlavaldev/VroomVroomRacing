@@ -1,0 +1,173 @@
+\hypertarget{_sound_system_8c}{}\doxysection{Référence du fichier Sound\+System.\+c}
+\label{_sound_system_8c}\index{SoundSystem.c@{SoundSystem.c}}
+
+
+Creation du Systeme de son.  
+
+
+{\ttfamily \#include \char`\"{}../common/conio.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$Sound\+System.\+h$>$}\newline
+{\ttfamily \#include $<$irr\+Klang.\+h$>$}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_sound_system_8c_a3369dd3d8cce12de0d7fca62a4bd2a3c}{init\+Music\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em Initialise l\textquotesingle{}engine de son. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_sound_system_8c_a8c2c4ee99dec0ee61df5ee03a8f0808f}{is\+Music\+Init}} (ISound\+Engine $\ast$engine)
+\item 
+void \mbox{\hyperlink{_sound_system_8c_a44c781b388c8f65655a3e1150c52305a}{play\+Back\+Music}} (ISound\+Engine $\ast$engine)
+\item 
+void \mbox{\hyperlink{_sound_system_8c_abf64dc7b10c2c1377f74cd6335548f53}{play\+Demarrage\+Avancer}} ()
+\begin{DoxyCompactList}\small\item\em SFX Démarrage Avancer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sound_system_8c_a5c4a8c9ff5bb6427afc8282eaadb01a5}{play\+Loop\+Avancer}} ()
+\begin{DoxyCompactList}\small\item\em SFX Loop Avancer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sound_system_8c_ad954d334194296944a1ae1c87bb4630c}{play\+Lacher\+Avancer}} ()
+\begin{DoxyCompactList}\small\item\em SFX Lacher bouton Avancer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sound_system_8c_ad4c97e3d6cbaa579fa3b7da4de2b40dd}{play\+Reprise\+Avancer}} ()
+\begin{DoxyCompactList}\small\item\em SFX reprise après lacher bouton avancer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sound_system_8c_a64b144a52ee422a9478f583dcdd7205c}{play\+Reculer}} ()
+\begin{DoxyCompactList}\small\item\em SFX Reculer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sound_system_8c_acd08426ef99f4a45ec4cf962d8875c65}{play\+Loop\+Reculer}} ()
+\begin{DoxyCompactList}\small\item\em SFX loop recul. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sound_system_8c_a2d9200100954e626116ce7b9b27757f2}{play\+Lacher\+Reculer}} ()
+\begin{DoxyCompactList}\small\item\em SFX reprise après lacher bouton reculer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sound_system_8c_aa8c7c1791a169776e1c95f037c826656}{play\+Freiner}} ()
+\begin{DoxyCompactList}\small\item\em SFX Frein. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_sound_system_8c_a45c5af5da38a201f019fc9b2dee37b35}{Drop\+Music\+Engine}} (ISound\+Engine $\ast$engine)
+\item 
+int \mbox{\hyperlink{_sound_system_8c_a217dbf8b442f20279ea00b898af96f52}{main}} (int argc, const char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Creation du Systeme de son. 
+
+\begin{DoxyAuthor}{Auteur}
+\{Romain LAVAL, Nathan LABBE, Louis GEORGET\} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12 Mars 2021
+\end{DoxyDate}
+Creation du systeme de sonorites du jeu \begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{_sound_system_8c_a45c5af5da38a201f019fc9b2dee37b35}\label{_sound_system_8c_a45c5af5da38a201f019fc9b2dee37b35}} 
+\index{SoundSystem.c@{SoundSystem.c}!DropMusicEngine@{DropMusicEngine}}
+\index{DropMusicEngine@{DropMusicEngine}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{DropMusicEngine()}{DropMusicEngine()}}
+{\footnotesize\ttfamily void Drop\+Music\+Engine (\begin{DoxyParamCaption}\item[{ISound\+Engine $\ast$}]{engine }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_sound_system_8c_a3369dd3d8cce12de0d7fca62a4bd2a3c}\label{_sound_system_8c_a3369dd3d8cce12de0d7fca62a4bd2a3c}} 
+\index{SoundSystem.c@{SoundSystem.c}!initMusicEngine@{initMusicEngine}}
+\index{initMusicEngine@{initMusicEngine}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{initMusicEngine()}{initMusicEngine()}}
+{\footnotesize\ttfamily init\+Music\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise l\textquotesingle{}engine de son. 
+
+\mbox{\Hypertarget{_sound_system_8c_a8c2c4ee99dec0ee61df5ee03a8f0808f}\label{_sound_system_8c_a8c2c4ee99dec0ee61df5ee03a8f0808f}} 
+\index{SoundSystem.c@{SoundSystem.c}!isMusicInit@{isMusicInit}}
+\index{isMusicInit@{isMusicInit}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{isMusicInit()}{isMusicInit()}}
+{\footnotesize\ttfamily int is\+Music\+Init (\begin{DoxyParamCaption}\item[{ISound\+Engine $\ast$}]{engine }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_sound_system_8c_a217dbf8b442f20279ea00b898af96f52}\label{_sound_system_8c_a217dbf8b442f20279ea00b898af96f52}} 
+\index{SoundSystem.c@{SoundSystem.c}!main@{main}}
+\index{main@{main}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_sound_system_8c_a44c781b388c8f65655a3e1150c52305a}\label{_sound_system_8c_a44c781b388c8f65655a3e1150c52305a}} 
+\index{SoundSystem.c@{SoundSystem.c}!playBackMusic@{playBackMusic}}
+\index{playBackMusic@{playBackMusic}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{playBackMusic()}{playBackMusic()}}
+{\footnotesize\ttfamily void play\+Back\+Music (\begin{DoxyParamCaption}\item[{ISound\+Engine $\ast$}]{engine }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_sound_system_8c_abf64dc7b10c2c1377f74cd6335548f53}\label{_sound_system_8c_abf64dc7b10c2c1377f74cd6335548f53}} 
+\index{SoundSystem.c@{SoundSystem.c}!playDemarrageAvancer@{playDemarrageAvancer}}
+\index{playDemarrageAvancer@{playDemarrageAvancer}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{playDemarrageAvancer()}{playDemarrageAvancer()}}
+{\footnotesize\ttfamily play\+Demarrage\+Avancer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+SFX Démarrage Avancer. 
+
+\mbox{\Hypertarget{_sound_system_8c_aa8c7c1791a169776e1c95f037c826656}\label{_sound_system_8c_aa8c7c1791a169776e1c95f037c826656}} 
+\index{SoundSystem.c@{SoundSystem.c}!playFreiner@{playFreiner}}
+\index{playFreiner@{playFreiner}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{playFreiner()}{playFreiner()}}
+{\footnotesize\ttfamily play\+Freiner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+SFX Frein. 
+
+\mbox{\Hypertarget{_sound_system_8c_ad954d334194296944a1ae1c87bb4630c}\label{_sound_system_8c_ad954d334194296944a1ae1c87bb4630c}} 
+\index{SoundSystem.c@{SoundSystem.c}!playLacherAvancer@{playLacherAvancer}}
+\index{playLacherAvancer@{playLacherAvancer}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{playLacherAvancer()}{playLacherAvancer()}}
+{\footnotesize\ttfamily play\+Lacher\+Avancer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+SFX Lacher bouton Avancer. 
+
+\mbox{\Hypertarget{_sound_system_8c_a2d9200100954e626116ce7b9b27757f2}\label{_sound_system_8c_a2d9200100954e626116ce7b9b27757f2}} 
+\index{SoundSystem.c@{SoundSystem.c}!playLacherReculer@{playLacherReculer}}
+\index{playLacherReculer@{playLacherReculer}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{playLacherReculer()}{playLacherReculer()}}
+{\footnotesize\ttfamily play\+Lacher\+Reculer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+SFX reprise après lacher bouton reculer. 
+
+\mbox{\Hypertarget{_sound_system_8c_a5c4a8c9ff5bb6427afc8282eaadb01a5}\label{_sound_system_8c_a5c4a8c9ff5bb6427afc8282eaadb01a5}} 
+\index{SoundSystem.c@{SoundSystem.c}!playLoopAvancer@{playLoopAvancer}}
+\index{playLoopAvancer@{playLoopAvancer}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{playLoopAvancer()}{playLoopAvancer()}}
+{\footnotesize\ttfamily play\+Loop\+Avancer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+SFX Loop Avancer. 
+
+\mbox{\Hypertarget{_sound_system_8c_acd08426ef99f4a45ec4cf962d8875c65}\label{_sound_system_8c_acd08426ef99f4a45ec4cf962d8875c65}} 
+\index{SoundSystem.c@{SoundSystem.c}!playLoopReculer@{playLoopReculer}}
+\index{playLoopReculer@{playLoopReculer}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{playLoopReculer()}{playLoopReculer()}}
+{\footnotesize\ttfamily play\+Loop\+Reculer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+SFX loop recul. 
+
+\mbox{\Hypertarget{_sound_system_8c_a64b144a52ee422a9478f583dcdd7205c}\label{_sound_system_8c_a64b144a52ee422a9478f583dcdd7205c}} 
+\index{SoundSystem.c@{SoundSystem.c}!playReculer@{playReculer}}
+\index{playReculer@{playReculer}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{playReculer()}{playReculer()}}
+{\footnotesize\ttfamily play\+Reculer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+SFX Reculer. 
+
+\mbox{\Hypertarget{_sound_system_8c_ad4c97e3d6cbaa579fa3b7da4de2b40dd}\label{_sound_system_8c_ad4c97e3d6cbaa579fa3b7da4de2b40dd}} 
+\index{SoundSystem.c@{SoundSystem.c}!playRepriseAvancer@{playRepriseAvancer}}
+\index{playRepriseAvancer@{playRepriseAvancer}!SoundSystem.c@{SoundSystem.c}}
+\doxysubsubsection{\texorpdfstring{playRepriseAvancer()}{playRepriseAvancer()}}
+{\footnotesize\ttfamily play\+Reprise\+Avancer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+SFX reprise après lacher bouton avancer. 
+

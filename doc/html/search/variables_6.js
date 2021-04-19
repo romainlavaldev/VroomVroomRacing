@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['renderer_72',['renderer',['../_v_v_r_8c.html#a966da7a60c4ea3ba301e26ccc5efe452',1,'VVR.c']]],
-  ['running_73',['running',['../_v_v_r_8c.html#a2f45113638a0b749a8a205d2cd7fb42b',1,'VVR.c']]]
+  ['gameover_355',['gameOver',['../jeu_8c.html#a9608d03ff24f78a495447407587e870f',1,'jeu.c']]]
 ];

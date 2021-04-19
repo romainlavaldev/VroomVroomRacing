@@ -1,0 +1,127 @@
+\hypertarget{list_8c}{}\doxysection{Référence du fichier list.\+c}
+\label{list_8c}\index{list.c@{list.c}}
+
+
+Liste.  
+
+
+{\ttfamily \#include $<$list.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{list_8c_a764470ae150958de4a8c6b2f280d923f}{init\+Liste}} (t\+\_\+\+GLuintliste $\ast$l)
+\item 
+int \mbox{\hyperlink{list_8c_a62aeac071554c73ec1761f83e46e9821}{liste\+Vide}} (t\+\_\+\+GLuintliste $\ast$l)
+\item 
+int \mbox{\hyperlink{list_8c_ad6170cb49ba769f25acd35bfe880f3f4}{hors\+Liste}} (t\+\_\+\+GLuintliste $\ast$l)
+\item 
+void \mbox{\hyperlink{list_8c_a0da8b7fae17c7212bb25258d2ee26729}{en\+Fin}} (t\+\_\+\+GLuintliste $\ast$l)
+\item 
+void \mbox{\hyperlink{list_8c_ad20a5934300285e4c1bd4877e802ee44}{en\+Debut}} (t\+\_\+\+GLuintliste $\ast$l)
+\item 
+void \mbox{\hyperlink{list_8c_aaef14080b2948bb36e854eaf684eda7b}{precedent}} (t\+\_\+\+GLuintliste $\ast$l)
+\item 
+void \mbox{\hyperlink{list_8c_a2f5121c93734af8110f2d04752e8d2af}{suivant}} (t\+\_\+\+GLuintliste $\ast$l)
+\item 
+GLuint \mbox{\hyperlink{list_8c_ad8ea20a615222f2535a50648ada55d61}{valeur\+Elt}} (t\+\_\+\+GLuintliste $\ast$l)
+\item 
+void \mbox{\hyperlink{list_8c_a8316250603f4c05b6db1ec90f99d5a5e}{modif\+Elt}} (t\+\_\+\+GLuintliste $\ast$l, GLuint v)
+\item 
+void \mbox{\hyperlink{list_8c_a8f5e7d4f25d7e8121d79e603690772bf}{oter\+Elt}} (t\+\_\+\+GLuintliste $\ast$l)
+\item 
+void \mbox{\hyperlink{list_8c_a6873c6eef1255ce535f9343b6f10106f}{ajout\+Droit}} (t\+\_\+\+GLuintliste $\ast$l, GLuint v)
+\item 
+void \mbox{\hyperlink{list_8c_acffffa03abb9bc71e667ad61c8929e37}{ajout\+Gauche}} (t\+\_\+\+GLuintliste $\ast$l, GLuint v)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Liste. 
+
+\begin{DoxyAuthor}{Auteur}
+\{Romain LAVAL, Nathan LABBE, Louis GEORGET\} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12 Mars 2021
+\end{DoxyDate}
+Creation d\textquotesingle{}une liste \begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{list_8c_a6873c6eef1255ce535f9343b6f10106f}\label{list_8c_a6873c6eef1255ce535f9343b6f10106f}} 
+\index{list.c@{list.c}!ajoutDroit@{ajoutDroit}}
+\index{ajoutDroit@{ajoutDroit}!list.c@{list.c}}
+\doxysubsubsection{\texorpdfstring{ajoutDroit()}{ajoutDroit()}}
+{\footnotesize\ttfamily void ajout\+Droit (\begin{DoxyParamCaption}\item[{t\+\_\+\+GLuintliste $\ast$}]{l,  }\item[{GLuint}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{list_8c_acffffa03abb9bc71e667ad61c8929e37}\label{list_8c_acffffa03abb9bc71e667ad61c8929e37}} 
+\index{list.c@{list.c}!ajoutGauche@{ajoutGauche}}
+\index{ajoutGauche@{ajoutGauche}!list.c@{list.c}}
+\doxysubsubsection{\texorpdfstring{ajoutGauche()}{ajoutGauche()}}
+{\footnotesize\ttfamily void ajout\+Gauche (\begin{DoxyParamCaption}\item[{t\+\_\+\+GLuintliste $\ast$}]{l,  }\item[{GLuint}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{list_8c_ad20a5934300285e4c1bd4877e802ee44}\label{list_8c_ad20a5934300285e4c1bd4877e802ee44}} 
+\index{list.c@{list.c}!enDebut@{enDebut}}
+\index{enDebut@{enDebut}!list.c@{list.c}}
+\doxysubsubsection{\texorpdfstring{enDebut()}{enDebut()}}
+{\footnotesize\ttfamily void en\+Debut (\begin{DoxyParamCaption}\item[{t\+\_\+\+GLuintliste $\ast$}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{list_8c_a0da8b7fae17c7212bb25258d2ee26729}\label{list_8c_a0da8b7fae17c7212bb25258d2ee26729}} 
+\index{list.c@{list.c}!enFin@{enFin}}
+\index{enFin@{enFin}!list.c@{list.c}}
+\doxysubsubsection{\texorpdfstring{enFin()}{enFin()}}
+{\footnotesize\ttfamily void en\+Fin (\begin{DoxyParamCaption}\item[{t\+\_\+\+GLuintliste $\ast$}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{list_8c_ad6170cb49ba769f25acd35bfe880f3f4}\label{list_8c_ad6170cb49ba769f25acd35bfe880f3f4}} 
+\index{list.c@{list.c}!horsListe@{horsListe}}
+\index{horsListe@{horsListe}!list.c@{list.c}}
+\doxysubsubsection{\texorpdfstring{horsListe()}{horsListe()}}
+{\footnotesize\ttfamily int hors\+Liste (\begin{DoxyParamCaption}\item[{t\+\_\+\+GLuintliste $\ast$}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{list_8c_a764470ae150958de4a8c6b2f280d923f}\label{list_8c_a764470ae150958de4a8c6b2f280d923f}} 
+\index{list.c@{list.c}!initListe@{initListe}}
+\index{initListe@{initListe}!list.c@{list.c}}
+\doxysubsubsection{\texorpdfstring{initListe()}{initListe()}}
+{\footnotesize\ttfamily void init\+Liste (\begin{DoxyParamCaption}\item[{t\+\_\+\+GLuintliste $\ast$}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{list_8c_a62aeac071554c73ec1761f83e46e9821}\label{list_8c_a62aeac071554c73ec1761f83e46e9821}} 
+\index{list.c@{list.c}!listeVide@{listeVide}}
+\index{listeVide@{listeVide}!list.c@{list.c}}
+\doxysubsubsection{\texorpdfstring{listeVide()}{listeVide()}}
+{\footnotesize\ttfamily int liste\+Vide (\begin{DoxyParamCaption}\item[{t\+\_\+\+GLuintliste $\ast$}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{list_8c_a8316250603f4c05b6db1ec90f99d5a5e}\label{list_8c_a8316250603f4c05b6db1ec90f99d5a5e}} 
+\index{list.c@{list.c}!modifElt@{modifElt}}
+\index{modifElt@{modifElt}!list.c@{list.c}}
+\doxysubsubsection{\texorpdfstring{modifElt()}{modifElt()}}
+{\footnotesize\ttfamily void modif\+Elt (\begin{DoxyParamCaption}\item[{t\+\_\+\+GLuintliste $\ast$}]{l,  }\item[{GLuint}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{list_8c_a8f5e7d4f25d7e8121d79e603690772bf}\label{list_8c_a8f5e7d4f25d7e8121d79e603690772bf}} 
+\index{list.c@{list.c}!oterElt@{oterElt}}
+\index{oterElt@{oterElt}!list.c@{list.c}}
+\doxysubsubsection{\texorpdfstring{oterElt()}{oterElt()}}
+{\footnotesize\ttfamily void oter\+Elt (\begin{DoxyParamCaption}\item[{t\+\_\+\+GLuintliste $\ast$}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{list_8c_aaef14080b2948bb36e854eaf684eda7b}\label{list_8c_aaef14080b2948bb36e854eaf684eda7b}} 
+\index{list.c@{list.c}!precedent@{precedent}}
+\index{precedent@{precedent}!list.c@{list.c}}
+\doxysubsubsection{\texorpdfstring{precedent()}{precedent()}}
+{\footnotesize\ttfamily void precedent (\begin{DoxyParamCaption}\item[{t\+\_\+\+GLuintliste $\ast$}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{list_8c_a2f5121c93734af8110f2d04752e8d2af}\label{list_8c_a2f5121c93734af8110f2d04752e8d2af}} 
+\index{list.c@{list.c}!suivant@{suivant}}
+\index{suivant@{suivant}!list.c@{list.c}}
+\doxysubsubsection{\texorpdfstring{suivant()}{suivant()}}
+{\footnotesize\ttfamily void suivant (\begin{DoxyParamCaption}\item[{t\+\_\+\+GLuintliste $\ast$}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{list_8c_ad8ea20a615222f2535a50648ada55d61}\label{list_8c_ad8ea20a615222f2535a50648ada55d61}} 
+\index{list.c@{list.c}!valeurElt@{valeurElt}}
+\index{valeurElt@{valeurElt}!list.c@{list.c}}
+\doxysubsubsection{\texorpdfstring{valeurElt()}{valeurElt()}}
+{\footnotesize\ttfamily GLuint valeur\+Elt (\begin{DoxyParamCaption}\item[{t\+\_\+\+GLuintliste $\ast$}]{l }\end{DoxyParamCaption})}
+

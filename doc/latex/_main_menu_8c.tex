@@ -21,9 +21,9 @@ void \mbox{\hyperlink{_main_menu_8c_a609c5111ba09c1502d5dcf2ba8404d61}{start\+Ma
 void \mbox{\hyperlink{_main_menu_8c_a36f7a44ba341563764dddc6abc83ad72}{load\+Main\+Menu\+Images}} ()
 \begin{DoxyCompactList}\small\item\em Load les images du Menu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_main_menu_8c_a1664ceb08ed318024dc187b22f3d337c}{load\+Main\+Menu}} ()
-\begin{DoxyCompactList}\small\item\em Load les les fonctiones du main menu (Images,sons, et demarrage) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Load les les fonctions du main menu (Images,sons, et demarrage) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_main_menu_8c_a17dcb842fd5b4245070c0921b3860d86}{destroy\+Main\+Menu}} ()
-\begin{DoxyCompactList}\small\item\em Destruction de la fenêtre m. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destruction de la fenêtre Menu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_main_menu_8c_a03fc696b93f5d3426327976d330134b4}{update\+Main\+Menu\+Frame}} (SDL\+\_\+\+Event \mbox{\hyperlink{_v_v_r_8c_a6b57f01d3c576db5368dd0efc2f435a4}{event}})
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
@@ -33,11 +33,7 @@ int \mbox{\hyperlink{_main_menu_8c_a1fd231cbc37f5a66a2effe4419c5e3ba}{Main\+Menu
 \begin{DoxyCompactList}\small\item\em Introduit le dossier principal VVR. \end{DoxyCompactList}\item 
 Mix\+\_\+\+Chunk $\ast$ \mbox{\hyperlink{_main_menu_8c_a98a40fc0a42136151cc95c96c848443f}{main\+Menu\+Music}}
 \item 
-Mix\+\_\+\+Chunk $\ast$ \mbox{\hyperlink{_main_menu_8c_a92c9d2f6a38a817af6a7a03903544de6}{Button\+Hover\+SFX}}
-\item 
-Mix\+\_\+\+Chunk $\ast$ \mbox{\hyperlink{_main_menu_8c_a7acd0d14c295262ca4514ff226c8f6a2}{Button\+Clicked\+SFX}}
-\item 
-image\+\_\+t \mbox{\hyperlink{_main_menu_8c_a0bf48a7df0280eaa8b35da9193f48170}{bg}}
+image\+\_\+t \mbox{\hyperlink{_main_menu_8c_add0068ae5de08b0f0c7ed29147f765e4}{Main\+Menu\+BG}}
 \begin{DoxyCompactList}\small\item\em Définition des boutons de la main window. \end{DoxyCompactList}\item 
 image\+\_\+t \mbox{\hyperlink{_main_menu_8c_af9a292ef09116743c774cc7e6e1bb982}{btn\+Solo}}
 \item 
@@ -89,7 +85,7 @@ Menu principal, et d\textquotesingle{}accès vers les autres fenêtre \begin{Dox
 
 
 
-Destruction de la fenêtre m. 
+Destruction de la fenêtre Menu. 
 
 actualise la fenêtre celon le déplacement de la souris, hover.
 
@@ -106,7 +102,7 @@ actualise la fenêtre celon le déplacement de la souris, hover.
 
 
 
-Load les les fonctiones du main menu (Images,sons, et demarrage) 
+Load les les fonctions du main menu (Images,sons, et demarrage) 
 
 \mbox{\Hypertarget{_main_menu_8c_a36f7a44ba341563764dddc6abc83ad72}\label{_main_menu_8c_a36f7a44ba341563764dddc6abc83ad72}} 
 \index{MainMenu.c@{MainMenu.c}!loadMainMenuImages@{loadMainMenuImages}}
@@ -147,16 +143,6 @@ Demarre les sons du Menu.
 
 
 \doxysubsection{Documentation des variables}
-\mbox{\Hypertarget{_main_menu_8c_a0bf48a7df0280eaa8b35da9193f48170}\label{_main_menu_8c_a0bf48a7df0280eaa8b35da9193f48170}} 
-\index{MainMenu.c@{MainMenu.c}!bg@{bg}}
-\index{bg@{bg}!MainMenu.c@{MainMenu.c}}
-\doxysubsubsection{\texorpdfstring{bg}{bg}}
-{\footnotesize\ttfamily image\+\_\+t bg}
-
-
-
-Définition des boutons de la main window. 
-
 \mbox{\Hypertarget{_main_menu_8c_a00203e277720e202745544b2c1ada7a5}\label{_main_menu_8c_a00203e277720e202745544b2c1ada7a5}} 
 \index{MainMenu.c@{MainMenu.c}!btnMulti@{btnMulti}}
 \index{btnMulti@{btnMulti}!MainMenu.c@{MainMenu.c}}
@@ -211,17 +197,15 @@ Définition des boutons de la main window.
 \doxysubsubsection{\texorpdfstring{btnSoloH}{btnSoloH}}
 {\footnotesize\ttfamily image\+\_\+t btn\+SoloH}
 
-\mbox{\Hypertarget{_main_menu_8c_a7acd0d14c295262ca4514ff226c8f6a2}\label{_main_menu_8c_a7acd0d14c295262ca4514ff226c8f6a2}} 
-\index{MainMenu.c@{MainMenu.c}!ButtonClickedSFX@{ButtonClickedSFX}}
-\index{ButtonClickedSFX@{ButtonClickedSFX}!MainMenu.c@{MainMenu.c}}
-\doxysubsubsection{\texorpdfstring{ButtonClickedSFX}{ButtonClickedSFX}}
-{\footnotesize\ttfamily Mix\+\_\+\+Chunk$\ast$ Button\+Clicked\+SFX}
+\mbox{\Hypertarget{_main_menu_8c_add0068ae5de08b0f0c7ed29147f765e4}\label{_main_menu_8c_add0068ae5de08b0f0c7ed29147f765e4}} 
+\index{MainMenu.c@{MainMenu.c}!MainMenuBG@{MainMenuBG}}
+\index{MainMenuBG@{MainMenuBG}!MainMenu.c@{MainMenu.c}}
+\doxysubsubsection{\texorpdfstring{MainMenuBG}{MainMenuBG}}
+{\footnotesize\ttfamily image\+\_\+t Main\+Menu\+BG}
 
-\mbox{\Hypertarget{_main_menu_8c_a92c9d2f6a38a817af6a7a03903544de6}\label{_main_menu_8c_a92c9d2f6a38a817af6a7a03903544de6}} 
-\index{MainMenu.c@{MainMenu.c}!ButtonHoverSFX@{ButtonHoverSFX}}
-\index{ButtonHoverSFX@{ButtonHoverSFX}!MainMenu.c@{MainMenu.c}}
-\doxysubsubsection{\texorpdfstring{ButtonHoverSFX}{ButtonHoverSFX}}
-{\footnotesize\ttfamily Mix\+\_\+\+Chunk$\ast$ Button\+Hover\+SFX}
+
+
+Définition des boutons de la main window. 
 
 \mbox{\Hypertarget{_main_menu_8c_a1fd231cbc37f5a66a2effe4419c5e3ba}\label{_main_menu_8c_a1fd231cbc37f5a66a2effe4419c5e3ba}} 
 \index{MainMenu.c@{MainMenu.c}!MainMenuIsActive@{MainMenuIsActive}}

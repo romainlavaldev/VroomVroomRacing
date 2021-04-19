@@ -1,0 +1,101 @@
+\hypertarget{_test_open_g_l_g_l_f_w_8c}{}\doxysection{Référence du fichier Test\+Open\+GLGLFW.\+c}
+\label{_test_open_g_l_g_l_f_w_8c}\index{TestOpenGLGLFW.c@{TestOpenGLGLFW.c}}
+
+
+Game Window.  
+
+
+{\ttfamily \#include $<$glew.\+h$>$}\newline
+{\ttfamily \#include $<$glfw3.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$Test\+Open\+GLGLFW.\+h$>$}\newline
+{\ttfamily \#include $<$Renderer.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_test_open_g_l_g_l_f_w_8c_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\+\_\+\+WIDTH}}~640
+\item 
+\#define \mbox{\hyperlink{_test_open_g_l_g_l_f_w_8c_a6974d08a74da681b3957b2fead2608b8}{SCREEN\+\_\+\+HEIGHT}}~480
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_test_open_g_l_g_l_f_w_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\item 
+void \mbox{\hyperlink{_test_open_g_l_g_l_f_w_8c_ad7eb7b1d8fd59da1775364bf4e3ceb39}{draw\+Cube}} (GLfloat center\+PosX, GLfloat center\+PosY, GLfloat center\+PosZ, GLfloat edge\+Length)
+\item 
+void \mbox{\hyperlink{_test_open_g_l_g_l_f_w_8c_a0b9e239c8889734711f29fe45551605b}{key\+Callback}} (GLFWwindow $\ast$window, int key, int scancode, int action, int mods)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+GLfloat \mbox{\hyperlink{_test_open_g_l_g_l_f_w_8c_a9574c0f3eba60d25735c39da7ae167df}{rotationX}} = 0.\+0f
+\item 
+GLfloat \mbox{\hyperlink{_test_open_g_l_g_l_f_w_8c_a40e497ca975153ff755540393192e6dc}{rotationY}} = 0.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Game Window. 
+
+\begin{DoxyAuthor}{Auteur}
+\{Romain LAVAL, Nathan LABBE, Louis GEORGET\} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12 Mars 2021
+\end{DoxyDate}
+Programme render 3D de test du jeu \begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Documentation des macros}
+\mbox{\Hypertarget{_test_open_g_l_g_l_f_w_8c_a6974d08a74da681b3957b2fead2608b8}\label{_test_open_g_l_g_l_f_w_8c_a6974d08a74da681b3957b2fead2608b8}} 
+\index{TestOpenGLGLFW.c@{TestOpenGLGLFW.c}!SCREEN\_HEIGHT@{SCREEN\_HEIGHT}}
+\index{SCREEN\_HEIGHT@{SCREEN\_HEIGHT}!TestOpenGLGLFW.c@{TestOpenGLGLFW.c}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_HEIGHT}{SCREEN\_HEIGHT}}
+{\footnotesize\ttfamily \#define SCREEN\+\_\+\+HEIGHT~480}
+
+\mbox{\Hypertarget{_test_open_g_l_g_l_f_w_8c_a2cd109632a6dcccaa80b43561b1ab700}\label{_test_open_g_l_g_l_f_w_8c_a2cd109632a6dcccaa80b43561b1ab700}} 
+\index{TestOpenGLGLFW.c@{TestOpenGLGLFW.c}!SCREEN\_WIDTH@{SCREEN\_WIDTH}}
+\index{SCREEN\_WIDTH@{SCREEN\_WIDTH}!TestOpenGLGLFW.c@{TestOpenGLGLFW.c}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_WIDTH}{SCREEN\_WIDTH}}
+{\footnotesize\ttfamily \#define SCREEN\+\_\+\+WIDTH~640}
+
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{_test_open_g_l_g_l_f_w_8c_ad7eb7b1d8fd59da1775364bf4e3ceb39}\label{_test_open_g_l_g_l_f_w_8c_ad7eb7b1d8fd59da1775364bf4e3ceb39}} 
+\index{TestOpenGLGLFW.c@{TestOpenGLGLFW.c}!drawCube@{drawCube}}
+\index{drawCube@{drawCube}!TestOpenGLGLFW.c@{TestOpenGLGLFW.c}}
+\doxysubsubsection{\texorpdfstring{drawCube()}{drawCube()}}
+{\footnotesize\ttfamily void draw\+Cube (\begin{DoxyParamCaption}\item[{GLfloat}]{center\+PosX,  }\item[{GLfloat}]{center\+PosY,  }\item[{GLfloat}]{center\+PosZ,  }\item[{GLfloat}]{edge\+Length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_test_open_g_l_g_l_f_w_8c_a0b9e239c8889734711f29fe45551605b}\label{_test_open_g_l_g_l_f_w_8c_a0b9e239c8889734711f29fe45551605b}} 
+\index{TestOpenGLGLFW.c@{TestOpenGLGLFW.c}!keyCallback@{keyCallback}}
+\index{keyCallback@{keyCallback}!TestOpenGLGLFW.c@{TestOpenGLGLFW.c}}
+\doxysubsubsection{\texorpdfstring{keyCallback()}{keyCallback()}}
+{\footnotesize\ttfamily void key\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow $\ast$}]{window,  }\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_test_open_g_l_g_l_f_w_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_test_open_g_l_g_l_f_w_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{TestOpenGLGLFW.c@{TestOpenGLGLFW.c}!main@{main}}
+\index{main@{main}!TestOpenGLGLFW.c@{TestOpenGLGLFW.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{_test_open_g_l_g_l_f_w_8c_a9574c0f3eba60d25735c39da7ae167df}\label{_test_open_g_l_g_l_f_w_8c_a9574c0f3eba60d25735c39da7ae167df}} 
+\index{TestOpenGLGLFW.c@{TestOpenGLGLFW.c}!rotationX@{rotationX}}
+\index{rotationX@{rotationX}!TestOpenGLGLFW.c@{TestOpenGLGLFW.c}}
+\doxysubsubsection{\texorpdfstring{rotationX}{rotationX}}
+{\footnotesize\ttfamily GLfloat rotationX = 0.\+0f}
+
+\mbox{\Hypertarget{_test_open_g_l_g_l_f_w_8c_a40e497ca975153ff755540393192e6dc}\label{_test_open_g_l_g_l_f_w_8c_a40e497ca975153ff755540393192e6dc}} 
+\index{TestOpenGLGLFW.c@{TestOpenGLGLFW.c}!rotationY@{rotationY}}
+\index{rotationY@{rotationY}!TestOpenGLGLFW.c@{TestOpenGLGLFW.c}}
+\doxysubsubsection{\texorpdfstring{rotationY}{rotationY}}
+{\footnotesize\ttfamily GLfloat rotationY = 0.\+0f}
+

@@ -1,0 +1,171 @@
+\hypertarget{_solo_circuit_menu_8c}{}\doxysection{Référence du fichier Solo\+Circuit\+Menu.\+c}
+\label{_solo_circuit_menu_8c}\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+
+
+Fenêtre d\textquotesingle{}ouverture.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL\+\_\+mixer.\+h$>$}\newline
+{\ttfamily \#include $<$VVR.\+h$>$}\newline
+{\ttfamily \#include $<$commun.\+h$>$}\newline
+{\ttfamily \#include $<$Solo\+Circuit\+Menu.\+h$>$}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_solo_circuit_menu_8c_a58f874305fc227713ba9bcf55c541531}{load\+Solo\+Circuit\+Menu\+Sounds}} ()
+\begin{DoxyCompactList}\small\item\em Introduit le dossier principal VVR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_solo_circuit_menu_8c_a4adaa42c4de6ee1b18a9d6a79fc4a87c}{load\+Solo\+Circuit\+Menu\+Images}} ()
+\begin{DoxyCompactList}\small\item\em Load les images du Menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_solo_circuit_menu_8c_a011549a90cebc2e67976cb045e3f7444}{load\+Solo\+Circuit\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Load les les fonctiones du main menu (Images,sons, et demarrage) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_solo_circuit_menu_8c_a3102cfba30ae75ef5c8499dbc6e7bbd7}{destroy\+Solo\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Destruction de la fenêtre m. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_solo_circuit_menu_8c_aa65451fa984dba0874e0316abaa0f6ea}{update\+Solo\+Circuit\+Menu\+Frame}} (SDL\+\_\+\+Event \mbox{\hyperlink{_v_v_r_8c_a6b57f01d3c576db5368dd0efc2f435a4}{event}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+image\+\_\+t \mbox{\hyperlink{_solo_circuit_menu_8c_ad4823b42df74688f01f73577d8118a66}{Solo\+Circuit\+BG}}
+\begin{DoxyCompactList}\small\item\em Définition des boutons de la main window. \end{DoxyCompactList}\item 
+image\+\_\+t \mbox{\hyperlink{_solo_circuit_menu_8c_a23d7a59bcbec9bad5716bef59fafbca4}{btn\+Circuit}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_solo_circuit_menu_8c_a77a2433a94e943b4c9460145249f0921}{btn\+CircuitH}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_solo_circuit_menu_8c_a28b5b764304c8cfa9835e9f4b93cf2be}{btn\+CircuitC}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_solo_circuit_menu_8c_aab01e82d839a576ad4663916c4fd8dd4}{btn\+Circuit\+Retour}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_solo_circuit_menu_8c_af5b1ff1709e5e7e41bc3b5929ae86bee}{btn\+Circuit\+RetourH}}
+\item 
+image\+\_\+t \mbox{\hyperlink{_solo_circuit_menu_8c_a0e3ee12be4e42d295dbe8c60348cae72}{btn\+Circuit\+RetourC}}
+\item 
+int \mbox{\hyperlink{_solo_circuit_menu_8c_a44753772e4a2a19e106e2dfd842221a2}{on\+Button\+Circuit}} = false
+\item 
+int \mbox{\hyperlink{_solo_circuit_menu_8c_a525a6428a5fbed5a8233773485c2e457}{on\+Button\+Circuit\+Retour}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fenêtre d\textquotesingle{}ouverture. 
+
+\begin{DoxyAuthor}{Auteur}
+\{Romain LAVAL, Nathan LABBE, Louis GEORGET\}
+\end{DoxyAuthor}
+Menu Circuit de jeu \begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{_solo_circuit_menu_8c_a3102cfba30ae75ef5c8499dbc6e7bbd7}\label{_solo_circuit_menu_8c_a3102cfba30ae75ef5c8499dbc6e7bbd7}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!destroySoloMenu@{destroySoloMenu}}
+\index{destroySoloMenu@{destroySoloMenu}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{destroySoloMenu()}{destroySoloMenu()}}
+{\footnotesize\ttfamily destroy\+Solo\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruction de la fenêtre m. 
+
+\mbox{\Hypertarget{_solo_circuit_menu_8c_a011549a90cebc2e67976cb045e3f7444}\label{_solo_circuit_menu_8c_a011549a90cebc2e67976cb045e3f7444}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!loadSoloCircuitMenu@{loadSoloCircuitMenu}}
+\index{loadSoloCircuitMenu@{loadSoloCircuitMenu}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{loadSoloCircuitMenu()}{loadSoloCircuitMenu()}}
+{\footnotesize\ttfamily load\+Solo\+Circuit\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load les les fonctiones du main menu (Images,sons, et demarrage) 
+
+\mbox{\Hypertarget{_solo_circuit_menu_8c_a4adaa42c4de6ee1b18a9d6a79fc4a87c}\label{_solo_circuit_menu_8c_a4adaa42c4de6ee1b18a9d6a79fc4a87c}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!loadSoloCircuitMenuImages@{loadSoloCircuitMenuImages}}
+\index{loadSoloCircuitMenuImages@{loadSoloCircuitMenuImages}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{loadSoloCircuitMenuImages()}{loadSoloCircuitMenuImages()}}
+{\footnotesize\ttfamily load\+Solo\+Circuit\+Menu\+Images (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load les images du Menu. 
+
+\mbox{\Hypertarget{_solo_circuit_menu_8c_a58f874305fc227713ba9bcf55c541531}\label{_solo_circuit_menu_8c_a58f874305fc227713ba9bcf55c541531}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!loadSoloCircuitMenuSounds@{loadSoloCircuitMenuSounds}}
+\index{loadSoloCircuitMenuSounds@{loadSoloCircuitMenuSounds}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{loadSoloCircuitMenuSounds()}{loadSoloCircuitMenuSounds()}}
+{\footnotesize\ttfamily load\+Solo\+Circuit\+Menu\+Sounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Introduit le dossier principal VVR. 
+
+récupère dossier commun
+
+Load les sons du Menu \mbox{\Hypertarget{_solo_circuit_menu_8c_aa65451fa984dba0874e0316abaa0f6ea}\label{_solo_circuit_menu_8c_aa65451fa984dba0874e0316abaa0f6ea}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!updateSoloCircuitMenuFrame@{updateSoloCircuitMenuFrame}}
+\index{updateSoloCircuitMenuFrame@{updateSoloCircuitMenuFrame}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{updateSoloCircuitMenuFrame()}{updateSoloCircuitMenuFrame()}}
+{\footnotesize\ttfamily void update\+Solo\+Circuit\+Menu\+Frame (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Event}]{event }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{_solo_circuit_menu_8c_a23d7a59bcbec9bad5716bef59fafbca4}\label{_solo_circuit_menu_8c_a23d7a59bcbec9bad5716bef59fafbca4}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!btnCircuit@{btnCircuit}}
+\index{btnCircuit@{btnCircuit}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnCircuit}{btnCircuit}}
+{\footnotesize\ttfamily image\+\_\+t btn\+Circuit}
+
+\mbox{\Hypertarget{_solo_circuit_menu_8c_a28b5b764304c8cfa9835e9f4b93cf2be}\label{_solo_circuit_menu_8c_a28b5b764304c8cfa9835e9f4b93cf2be}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!btnCircuitC@{btnCircuitC}}
+\index{btnCircuitC@{btnCircuitC}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnCircuitC}{btnCircuitC}}
+{\footnotesize\ttfamily image\+\_\+t btn\+CircuitC}
+
+\mbox{\Hypertarget{_solo_circuit_menu_8c_a77a2433a94e943b4c9460145249f0921}\label{_solo_circuit_menu_8c_a77a2433a94e943b4c9460145249f0921}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!btnCircuitH@{btnCircuitH}}
+\index{btnCircuitH@{btnCircuitH}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnCircuitH}{btnCircuitH}}
+{\footnotesize\ttfamily image\+\_\+t btn\+CircuitH}
+
+\mbox{\Hypertarget{_solo_circuit_menu_8c_aab01e82d839a576ad4663916c4fd8dd4}\label{_solo_circuit_menu_8c_aab01e82d839a576ad4663916c4fd8dd4}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!btnCircuitRetour@{btnCircuitRetour}}
+\index{btnCircuitRetour@{btnCircuitRetour}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnCircuitRetour}{btnCircuitRetour}}
+{\footnotesize\ttfamily image\+\_\+t btn\+Circuit\+Retour}
+
+\mbox{\Hypertarget{_solo_circuit_menu_8c_a0e3ee12be4e42d295dbe8c60348cae72}\label{_solo_circuit_menu_8c_a0e3ee12be4e42d295dbe8c60348cae72}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!btnCircuitRetourC@{btnCircuitRetourC}}
+\index{btnCircuitRetourC@{btnCircuitRetourC}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnCircuitRetourC}{btnCircuitRetourC}}
+{\footnotesize\ttfamily image\+\_\+t btn\+Circuit\+RetourC}
+
+\mbox{\Hypertarget{_solo_circuit_menu_8c_af5b1ff1709e5e7e41bc3b5929ae86bee}\label{_solo_circuit_menu_8c_af5b1ff1709e5e7e41bc3b5929ae86bee}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!btnCircuitRetourH@{btnCircuitRetourH}}
+\index{btnCircuitRetourH@{btnCircuitRetourH}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{btnCircuitRetourH}{btnCircuitRetourH}}
+{\footnotesize\ttfamily image\+\_\+t btn\+Circuit\+RetourH}
+
+\mbox{\Hypertarget{_solo_circuit_menu_8c_a44753772e4a2a19e106e2dfd842221a2}\label{_solo_circuit_menu_8c_a44753772e4a2a19e106e2dfd842221a2}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!onButtonCircuit@{onButtonCircuit}}
+\index{onButtonCircuit@{onButtonCircuit}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{onButtonCircuit}{onButtonCircuit}}
+{\footnotesize\ttfamily int on\+Button\+Circuit = false}
+
+\mbox{\Hypertarget{_solo_circuit_menu_8c_a525a6428a5fbed5a8233773485c2e457}\label{_solo_circuit_menu_8c_a525a6428a5fbed5a8233773485c2e457}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!onButtonCircuitRetour@{onButtonCircuitRetour}}
+\index{onButtonCircuitRetour@{onButtonCircuitRetour}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{onButtonCircuitRetour}{onButtonCircuitRetour}}
+{\footnotesize\ttfamily int on\+Button\+Circuit\+Retour = false}
+
+\mbox{\Hypertarget{_solo_circuit_menu_8c_ad4823b42df74688f01f73577d8118a66}\label{_solo_circuit_menu_8c_ad4823b42df74688f01f73577d8118a66}} 
+\index{SoloCircuitMenu.c@{SoloCircuitMenu.c}!SoloCircuitBG@{SoloCircuitBG}}
+\index{SoloCircuitBG@{SoloCircuitBG}!SoloCircuitMenu.c@{SoloCircuitMenu.c}}
+\doxysubsubsection{\texorpdfstring{SoloCircuitBG}{SoloCircuitBG}}
+{\footnotesize\ttfamily image\+\_\+t Solo\+Circuit\+BG}
+
+
+
+Définition des boutons de la main window. 
+

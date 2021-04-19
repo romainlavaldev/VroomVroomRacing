@@ -1,0 +1,218 @@
+\hypertarget{objets_niveaux_8c}{}\doxysection{Référence du fichier objets\+Niveaux.\+c}
+\label{objets_niveaux_8c}\index{objetsNiveaux.c@{objetsNiveaux.c}}
+
+
+Objets\+Niveaux.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$objets\+Niveaux.\+h$>$}\newline
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{objets_niveaux_8c_aef173caf770a63b1d01c2e75a6e21147}{init\+Niveau1}} ()
+\begin{DoxyCompactList}\small\item\em Load les obstacles du niveau 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{objets_niveaux_8c_accbec082f81ad35083c5d22a6a214888}{init\+Niveau2}} ()
+\begin{DoxyCompactList}\small\item\em Load les obstacles du niveau 2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{objets_niveaux_8c_aa4156133d6451c925286a99eb7002bd9}{init\+Niveau3}} ()
+\begin{DoxyCompactList}\small\item\em Load les obstacles du niveau 3. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{objets_niveaux_8c_ae4cca46e58cbb436d95893bbd39cebc8}{objet\+Render}} (objet obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \mbox{\hyperlink{objets_niveaux_8c_a1f73b2b155602156685a8fc9d082acf9}{nb\+Objets\+Niveau\+Act}}
+\item 
+objet $\ast$ \mbox{\hyperlink{objets_niveaux_8c_a7b6746b87a2d88bcf8feee6b71e87767}{objets\+Niveau\+Act}}
+\item 
+int \mbox{\hyperlink{objets_niveaux_8c_a57ddb33449b402010d8a8d2a62d74c33}{pos\+Objets\+Niveau1}} \mbox{[}11\mbox{]}\mbox{[}11\mbox{]} = \{\{2,100\},\{-\/1,200\},\{3,250\},\{2,350\},\{-\/3,420\},\{-\/2,480\},\{0,520\},\{3,700\},\{0,790\},\{-\/1,850\},\{0,1000\}\}
+\item 
+objet \mbox{\hyperlink{objets_niveaux_8c_af9231a6bdc9e65f4d31a2526572e3f99}{objets\+Niveau1}} \mbox{[}11\mbox{]}
+\item 
+int \mbox{\hyperlink{objets_niveaux_8c_aed00919a46796cbc5737e71b79c14caf}{nb\+Objets\+Niveau1}} = 11
+\item 
+int \mbox{\hyperlink{objets_niveaux_8c_ade4f3630b3583526e0f82de4ecaee534}{pos\+Objets\+Niveau2}} \mbox{[}21\mbox{]}\mbox{[}21\mbox{]}
+\item 
+objet \mbox{\hyperlink{objets_niveaux_8c_a6b0fb941053b852827300a491328da66}{objets\+Niveau2}} \mbox{[}21\mbox{]}
+\item 
+int \mbox{\hyperlink{objets_niveaux_8c_a343c105fe219deed63ba12a8aad29725}{nb\+Objets\+Niveau2}} = 21
+\item 
+int \mbox{\hyperlink{objets_niveaux_8c_a08fc12e89e42cc871163dd527c5c5816}{pos\+Objets\+Niveau3}} \mbox{[}41\mbox{]}\mbox{[}41\mbox{]} = \{\{2,100\},\{1,200\},\{-\/1,250\},\{2,350\},\{-\/1,420\},\{2,480\},\{1,520\},\{-\/3,700\},\{1,790\},\{2,850\},\{-\/2,1100\},\{0, 1200\},\{2, 1250\},\{-\/1, 135\},\{-\/2, 1420\},\{1, 1480\},\{3, 1520\},\{0, 1700\},\{-\/3, 1790\},\{-\/1, 1850\},\{-\/1, 2100\},\{3, 2200\},\{2, 2250\},\{0, 2350\},\{-\/1, 2390\},\{-\/1, 2480\},\{0, 2520\},\{2, 2780\},\{0, 2820\},\{-\/3, 2980\},\{2, 3100\},\{0, 3200\},\{-\/1, 3250\},\{3, 3350\},\{2, 3420\},\{-\/3, 3480\},\{0, 3520\},\{-\/1, 3700\},\{0, 3790\},\{2, 3920\},\{0,4000\}\}
+\item 
+objet \mbox{\hyperlink{objets_niveaux_8c_a0d91dee511aa15498d471d0093796435}{objets\+Niveau3}} \mbox{[}41\mbox{]}
+\item 
+int \mbox{\hyperlink{objets_niveaux_8c_a887d81e92964a9100308ff5596c6a663}{nb\+Objets\+Niveau3}} = 41
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Objets\+Niveaux. 
+
+\begin{DoxyAuthor}{Auteur}
+\{Romain LAVAL, Nathan LABBE, Louis GEORGET\} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+29 Mars 2021
+\end{DoxyDate}
+Les obstacles de fou \begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{objets_niveaux_8c_aef173caf770a63b1d01c2e75a6e21147}\label{objets_niveaux_8c_aef173caf770a63b1d01c2e75a6e21147}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!initNiveau1@{initNiveau1}}
+\index{initNiveau1@{initNiveau1}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{initNiveau1()}{initNiveau1()}}
+{\footnotesize\ttfamily init\+Niveau1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load les obstacles du niveau 1. 
+
+\mbox{\Hypertarget{objets_niveaux_8c_accbec082f81ad35083c5d22a6a214888}\label{objets_niveaux_8c_accbec082f81ad35083c5d22a6a214888}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!initNiveau2@{initNiveau2}}
+\index{initNiveau2@{initNiveau2}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{initNiveau2()}{initNiveau2()}}
+{\footnotesize\ttfamily init\+Niveau2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load les obstacles du niveau 2. 
+
+\mbox{\Hypertarget{objets_niveaux_8c_aa4156133d6451c925286a99eb7002bd9}\label{objets_niveaux_8c_aa4156133d6451c925286a99eb7002bd9}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!initNiveau3@{initNiveau3}}
+\index{initNiveau3@{initNiveau3}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{initNiveau3()}{initNiveau3()}}
+{\footnotesize\ttfamily init\+Niveau3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load les obstacles du niveau 3. 
+
+\mbox{\Hypertarget{objets_niveaux_8c_ae4cca46e58cbb436d95893bbd39cebc8}\label{objets_niveaux_8c_ae4cca46e58cbb436d95893bbd39cebc8}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!objetRender@{objetRender}}
+\index{objetRender@{objetRender}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{objetRender()}{objetRender()}}
+{\footnotesize\ttfamily void objet\+Render (\begin{DoxyParamCaption}\item[{objet}]{obj }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{objets_niveaux_8c_aed00919a46796cbc5737e71b79c14caf}\label{objets_niveaux_8c_aed00919a46796cbc5737e71b79c14caf}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!nbObjetsNiveau1@{nbObjetsNiveau1}}
+\index{nbObjetsNiveau1@{nbObjetsNiveau1}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{nbObjetsNiveau1}{nbObjetsNiveau1}}
+{\footnotesize\ttfamily int nb\+Objets\+Niveau1 = 11}
+
+\mbox{\Hypertarget{objets_niveaux_8c_a343c105fe219deed63ba12a8aad29725}\label{objets_niveaux_8c_a343c105fe219deed63ba12a8aad29725}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!nbObjetsNiveau2@{nbObjetsNiveau2}}
+\index{nbObjetsNiveau2@{nbObjetsNiveau2}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{nbObjetsNiveau2}{nbObjetsNiveau2}}
+{\footnotesize\ttfamily int nb\+Objets\+Niveau2 = 21}
+
+\mbox{\Hypertarget{objets_niveaux_8c_a887d81e92964a9100308ff5596c6a663}\label{objets_niveaux_8c_a887d81e92964a9100308ff5596c6a663}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!nbObjetsNiveau3@{nbObjetsNiveau3}}
+\index{nbObjetsNiveau3@{nbObjetsNiveau3}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{nbObjetsNiveau3}{nbObjetsNiveau3}}
+{\footnotesize\ttfamily int nb\+Objets\+Niveau3 = 41}
+
+\mbox{\Hypertarget{objets_niveaux_8c_a1f73b2b155602156685a8fc9d082acf9}\label{objets_niveaux_8c_a1f73b2b155602156685a8fc9d082acf9}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!nbObjetsNiveauAct@{nbObjetsNiveauAct}}
+\index{nbObjetsNiveauAct@{nbObjetsNiveauAct}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{nbObjetsNiveauAct}{nbObjetsNiveauAct}}
+{\footnotesize\ttfamily int$\ast$ nb\+Objets\+Niveau\+Act}
+
+\mbox{\Hypertarget{objets_niveaux_8c_af9231a6bdc9e65f4d31a2526572e3f99}\label{objets_niveaux_8c_af9231a6bdc9e65f4d31a2526572e3f99}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!objetsNiveau1@{objetsNiveau1}}
+\index{objetsNiveau1@{objetsNiveau1}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{objetsNiveau1}{objetsNiveau1}}
+{\footnotesize\ttfamily objet objets\+Niveau1\mbox{[}11\mbox{]}}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{2, 100, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{-\/1, 200, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{3, 250, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{2, 350, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{-\/3, 420, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{-\/2, 480, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{0, 520, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{3, 700, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{0, 790, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{-\/1, 850, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{0,1000,0,TEXTURE\_NONE,NULL, TYPE\_FINISH\}}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{objets_niveaux_8c_a6b0fb941053b852827300a491328da66}\label{objets_niveaux_8c_a6b0fb941053b852827300a491328da66}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!objetsNiveau2@{objetsNiveau2}}
+\index{objetsNiveau2@{objetsNiveau2}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{objetsNiveau2}{objetsNiveau2}}
+{\footnotesize\ttfamily objet objets\+Niveau2\mbox{[}21\mbox{]}}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{2, 100, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_MOUV, -\/1\},}
+\DoxyCodeLine{    \{1, 200, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{-\/1, 250, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{2, 350, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{-\/1, 420, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{2, 480, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{1, 520, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_MOUV, -\/1\},}
+\DoxyCodeLine{    \{-\/3, 700, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{1, 790, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{2, 850, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, -\/1\},}
+\DoxyCodeLine{    \{-\/2, 1100, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_MOUV, -\/1\},}
+\DoxyCodeLine{    \{0, 1200, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{2, 1250, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{-\/1, 1350, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{-\/2, 1420, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, -\/1\},}
+\DoxyCodeLine{    \{1, 1480, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_MOUV, -\/1\},}
+\DoxyCodeLine{    \{3, 1520, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{0, 1700, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{-\/3, 1790, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{-\/1, 1850, 0, TEXTURE\_POUBELLE, NULL, TYPE\_OBSTACLE\_FIXE, 0\},}
+\DoxyCodeLine{    \{0,2000,0,TEXTURE\_NONE,NULL, TYPE\_FINISH\}}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{objets_niveaux_8c_a0d91dee511aa15498d471d0093796435}\label{objets_niveaux_8c_a0d91dee511aa15498d471d0093796435}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!objetsNiveau3@{objetsNiveau3}}
+\index{objetsNiveau3@{objetsNiveau3}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{objetsNiveau3}{objetsNiveau3}}
+{\footnotesize\ttfamily objet objets\+Niveau3\mbox{[}41\mbox{]}}
+
+\mbox{\Hypertarget{objets_niveaux_8c_a7b6746b87a2d88bcf8feee6b71e87767}\label{objets_niveaux_8c_a7b6746b87a2d88bcf8feee6b71e87767}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!objetsNiveauAct@{objetsNiveauAct}}
+\index{objetsNiveauAct@{objetsNiveauAct}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{objetsNiveauAct}{objetsNiveauAct}}
+{\footnotesize\ttfamily objet$\ast$ objets\+Niveau\+Act}
+
+\mbox{\Hypertarget{objets_niveaux_8c_a57ddb33449b402010d8a8d2a62d74c33}\label{objets_niveaux_8c_a57ddb33449b402010d8a8d2a62d74c33}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!posObjetsNiveau1@{posObjetsNiveau1}}
+\index{posObjetsNiveau1@{posObjetsNiveau1}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{posObjetsNiveau1}{posObjetsNiveau1}}
+{\footnotesize\ttfamily int pos\+Objets\+Niveau1\mbox{[}11\mbox{]}\mbox{[}11\mbox{]} = \{\{2,100\},\{-\/1,200\},\{3,250\},\{2,350\},\{-\/3,420\},\{-\/2,480\},\{0,520\},\{3,700\},\{0,790\},\{-\/1,850\},\{0,1000\}\}}
+
+\mbox{\Hypertarget{objets_niveaux_8c_ade4f3630b3583526e0f82de4ecaee534}\label{objets_niveaux_8c_ade4f3630b3583526e0f82de4ecaee534}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!posObjetsNiveau2@{posObjetsNiveau2}}
+\index{posObjetsNiveau2@{posObjetsNiveau2}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{posObjetsNiveau2}{posObjetsNiveau2}}
+{\footnotesize\ttfamily int pos\+Objets\+Niveau2\mbox{[}21\mbox{]}\mbox{[}21\mbox{]}}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\{2,100\},\{1,200\},\{-\/1,250\},\{2,350\},\{-\/1,420\},\{2,480\},\{1,520\},\{-\/3,700\},\{1,790\},\{2,850\},\{-\/2,1100\},\{0,1200\},}
+\DoxyCodeLine{\{2,1250\},\{-\/1,1350\},\{-\/2,1420\},\{1,1480\},\{3,1520\},\{0,1700\},\{-\/3,1790\},\{-\/1,1850\},\{0,2000\}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{objets_niveaux_8c_a08fc12e89e42cc871163dd527c5c5816}\label{objets_niveaux_8c_a08fc12e89e42cc871163dd527c5c5816}} 
+\index{objetsNiveaux.c@{objetsNiveaux.c}!posObjetsNiveau3@{posObjetsNiveau3}}
+\index{posObjetsNiveau3@{posObjetsNiveau3}!objetsNiveaux.c@{objetsNiveaux.c}}
+\doxysubsubsection{\texorpdfstring{posObjetsNiveau3}{posObjetsNiveau3}}
+{\footnotesize\ttfamily int pos\+Objets\+Niveau3\mbox{[}41\mbox{]}\mbox{[}41\mbox{]} = \{\{2,100\},\{1,200\},\{-\/1,250\},\{2,350\},\{-\/1,420\},\{2,480\},\{1,520\},\{-\/3,700\},\{1,790\},\{2,850\},\{-\/2,1100\},\{0, 1200\},\{2, 1250\},\{-\/1, 135\},\{-\/2, 1420\},\{1, 1480\},\{3, 1520\},\{0, 1700\},\{-\/3, 1790\},\{-\/1, 1850\},\{-\/1, 2100\},\{3, 2200\},\{2, 2250\},\{0, 2350\},\{-\/1, 2390\},\{-\/1, 2480\},\{0, 2520\},\{2, 2780\},\{0, 2820\},\{-\/3, 2980\},\{2, 3100\},\{0, 3200\},\{-\/1, 3250\},\{3, 3350\},\{2, 3420\},\{-\/3, 3480\},\{0, 3520\},\{-\/1, 3700\},\{0, 3790\},\{2, 3920\},\{0,4000\}\}}
+

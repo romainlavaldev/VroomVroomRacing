@@ -1,0 +1,199 @@
+\hypertarget{glm_8c}{}\doxysection{Référence du fichier glm.\+c}
+\label{glm_8c}\index{glm.c@{glm.c}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$glm.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___g_l_mnode}{\+\_\+\+GLMnode}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{glm_8c_a16a0f7e7053a679c9bf4289b441a2be7}{T}}(x)~(model-\/$>$triangles\mbox{[}(x)\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct___g_l_mnode}{\+\_\+\+GLMnode}} \mbox{\hyperlink{glm_8c_ae6be798e43cc7344b781440a6e026998}{GLMnode}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+GLfloat $\ast$ \mbox{\hyperlink{glm_8c_a2e06f9b1b02d5f63a62ac1892afdb7d2}{glm\+Weld\+Vectors}} (GLfloat $\ast$vectors, GLuint $\ast$numvectors, GLfloat epsilon)
+\item 
+GLMgroup $\ast$ \mbox{\hyperlink{glm_8c_a68f982ec2c11bc54cca63712ea03dd9f}{glm\+Find\+Group}} (GLMmodel $\ast$model, char $\ast$name)
+\item 
+GLMgroup $\ast$ \mbox{\hyperlink{glm_8c_a80b35902b3490decfa3ab3c2d1b2e7dc}{glm\+Add\+Group}} (GLMmodel $\ast$model, char $\ast$name)
+\item 
+GLuint \mbox{\hyperlink{glm_8c_a37cbc2a9e7c2b19665bea056f90e4e66}{glm\+Find\+Material}} (GLMmodel $\ast$model, char $\ast$name)
+\item 
+GLfloat \mbox{\hyperlink{glm_8c_a4774d9eb47e48064a79d22fd0c1d90b9}{glm\+Unitize}} (GLMmodel $\ast$model)
+\item 
+GLvoid \mbox{\hyperlink{glm_8c_af3e5bac9fa2a6507cf6f3defe9187c21}{glm\+Dimensions}} (GLMmodel $\ast$model, GLfloat $\ast$dimensions)
+\item 
+GLvoid \mbox{\hyperlink{glm_8c_a60b5b5132bb5f88a07f6efe591e83248}{glm\+Scale}} (GLMmodel $\ast$model, GLfloat scale)
+\item 
+GLvoid \mbox{\hyperlink{glm_8c_a5b5d0f3a245144861f344efd8e3b2df9}{glm\+Reverse\+Winding}} (GLMmodel $\ast$model)
+\item 
+GLvoid \mbox{\hyperlink{glm_8c_ad6f16a8e0b7c669ffaf6ec475aa88a86}{glm\+Facet\+Normals}} (GLMmodel $\ast$model)
+\item 
+GLvoid \mbox{\hyperlink{glm_8c_a52e9a1a90f7ce16dc852210f39ab481e}{glm\+Vertex\+Normals}} (GLMmodel $\ast$model, GLfloat angle)
+\item 
+GLvoid \mbox{\hyperlink{glm_8c_aa9107cc3ac3f4e7b44ff0dd79cf32e68}{glm\+Linear\+Texture}} (GLMmodel $\ast$model)
+\item 
+GLvoid \mbox{\hyperlink{glm_8c_ab9f677c963577126280616bca555469f}{glm\+Spheremap\+Texture}} (GLMmodel $\ast$model)
+\item 
+GLvoid \mbox{\hyperlink{glm_8c_a7f61a39552c8d410ac09dbd3e780599b}{glm\+Delete}} (GLMmodel $\ast$model)
+\item 
+GLMmodel $\ast$ \mbox{\hyperlink{glm_8c_aa254f542e476362d0ef9a95d71459333}{glm\+Read\+OBJ}} (char $\ast$filename)
+\item 
+GLvoid \mbox{\hyperlink{glm_8c_ac7345f822782a8b3e3e18f2957c6395d}{glm\+Write\+OBJ}} (GLMmodel $\ast$model, char $\ast$filename, GLuint mode)
+\item 
+GLvoid \mbox{\hyperlink{glm_8c_a5321829bb10da14b097a85d3094469da}{glm\+Draw}} (GLMmodel $\ast$model, GLuint mode)
+\item 
+GLuint \mbox{\hyperlink{glm_8c_af30403b5c29ff60aa06121bc9fa4f540}{glm\+List}} (GLMmodel $\ast$model, GLuint mode)
+\item 
+GLvoid \mbox{\hyperlink{glm_8c_a66b70d9ab30b141febed9731f3086542}{glm\+Weld}} (GLMmodel $\ast$model, GLfloat epsilon)
+\item 
+GLubyte $\ast$ \mbox{\hyperlink{glm_8c_aaf259d0adcc2c026ddcf7c9f408407c1}{glm\+Read\+PPM}} (char $\ast$filename, int $\ast$width, int $\ast$height)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des macros}
+\mbox{\Hypertarget{glm_8c_a16a0f7e7053a679c9bf4289b441a2be7}\label{glm_8c_a16a0f7e7053a679c9bf4289b441a2be7}} 
+\index{glm.c@{glm.c}!T@{T}}
+\index{T@{T}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily \#define T(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(model-\/$>$triangles\mbox{[}(x)\mbox{]})}
+
+
+
+\doxysubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{glm_8c_ae6be798e43cc7344b781440a6e026998}\label{glm_8c_ae6be798e43cc7344b781440a6e026998}} 
+\index{glm.c@{glm.c}!GLMnode@{GLMnode}}
+\index{GLMnode@{GLMnode}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{GLMnode}{GLMnode}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___g_l_mnode}{\+\_\+\+GLMnode}} \mbox{\hyperlink{glm_8c_ae6be798e43cc7344b781440a6e026998}{GLMnode}}}
+
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{glm_8c_a80b35902b3490decfa3ab3c2d1b2e7dc}\label{glm_8c_a80b35902b3490decfa3ab3c2d1b2e7dc}} 
+\index{glm.c@{glm.c}!glmAddGroup@{glmAddGroup}}
+\index{glmAddGroup@{glmAddGroup}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmAddGroup()}{glmAddGroup()}}
+{\footnotesize\ttfamily GLMgroup$\ast$ glm\+Add\+Group (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_a7f61a39552c8d410ac09dbd3e780599b}\label{glm_8c_a7f61a39552c8d410ac09dbd3e780599b}} 
+\index{glm.c@{glm.c}!glmDelete@{glmDelete}}
+\index{glmDelete@{glmDelete}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmDelete()}{glmDelete()}}
+{\footnotesize\ttfamily GLvoid glm\+Delete (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_af3e5bac9fa2a6507cf6f3defe9187c21}\label{glm_8c_af3e5bac9fa2a6507cf6f3defe9187c21}} 
+\index{glm.c@{glm.c}!glmDimensions@{glmDimensions}}
+\index{glmDimensions@{glmDimensions}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmDimensions()}{glmDimensions()}}
+{\footnotesize\ttfamily GLvoid glm\+Dimensions (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model,  }\item[{GLfloat $\ast$}]{dimensions }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_a5321829bb10da14b097a85d3094469da}\label{glm_8c_a5321829bb10da14b097a85d3094469da}} 
+\index{glm.c@{glm.c}!glmDraw@{glmDraw}}
+\index{glmDraw@{glmDraw}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmDraw()}{glmDraw()}}
+{\footnotesize\ttfamily GLvoid glm\+Draw (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model,  }\item[{GLuint}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_ad6f16a8e0b7c669ffaf6ec475aa88a86}\label{glm_8c_ad6f16a8e0b7c669ffaf6ec475aa88a86}} 
+\index{glm.c@{glm.c}!glmFacetNormals@{glmFacetNormals}}
+\index{glmFacetNormals@{glmFacetNormals}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmFacetNormals()}{glmFacetNormals()}}
+{\footnotesize\ttfamily GLvoid glm\+Facet\+Normals (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_a68f982ec2c11bc54cca63712ea03dd9f}\label{glm_8c_a68f982ec2c11bc54cca63712ea03dd9f}} 
+\index{glm.c@{glm.c}!glmFindGroup@{glmFindGroup}}
+\index{glmFindGroup@{glmFindGroup}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmFindGroup()}{glmFindGroup()}}
+{\footnotesize\ttfamily GLMgroup$\ast$ glm\+Find\+Group (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_a37cbc2a9e7c2b19665bea056f90e4e66}\label{glm_8c_a37cbc2a9e7c2b19665bea056f90e4e66}} 
+\index{glm.c@{glm.c}!glmFindMaterial@{glmFindMaterial}}
+\index{glmFindMaterial@{glmFindMaterial}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmFindMaterial()}{glmFindMaterial()}}
+{\footnotesize\ttfamily GLuint glm\+Find\+Material (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_aa9107cc3ac3f4e7b44ff0dd79cf32e68}\label{glm_8c_aa9107cc3ac3f4e7b44ff0dd79cf32e68}} 
+\index{glm.c@{glm.c}!glmLinearTexture@{glmLinearTexture}}
+\index{glmLinearTexture@{glmLinearTexture}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmLinearTexture()}{glmLinearTexture()}}
+{\footnotesize\ttfamily GLvoid glm\+Linear\+Texture (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_af30403b5c29ff60aa06121bc9fa4f540}\label{glm_8c_af30403b5c29ff60aa06121bc9fa4f540}} 
+\index{glm.c@{glm.c}!glmList@{glmList}}
+\index{glmList@{glmList}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmList()}{glmList()}}
+{\footnotesize\ttfamily GLuint glm\+List (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model,  }\item[{GLuint}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_aa254f542e476362d0ef9a95d71459333}\label{glm_8c_aa254f542e476362d0ef9a95d71459333}} 
+\index{glm.c@{glm.c}!glmReadOBJ@{glmReadOBJ}}
+\index{glmReadOBJ@{glmReadOBJ}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmReadOBJ()}{glmReadOBJ()}}
+{\footnotesize\ttfamily GLMmodel$\ast$ glm\+Read\+OBJ (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_aaf259d0adcc2c026ddcf7c9f408407c1}\label{glm_8c_aaf259d0adcc2c026ddcf7c9f408407c1}} 
+\index{glm.c@{glm.c}!glmReadPPM@{glmReadPPM}}
+\index{glmReadPPM@{glmReadPPM}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmReadPPM()}{glmReadPPM()}}
+{\footnotesize\ttfamily GLubyte$\ast$ glm\+Read\+PPM (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{int $\ast$}]{width,  }\item[{int $\ast$}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_a5b5d0f3a245144861f344efd8e3b2df9}\label{glm_8c_a5b5d0f3a245144861f344efd8e3b2df9}} 
+\index{glm.c@{glm.c}!glmReverseWinding@{glmReverseWinding}}
+\index{glmReverseWinding@{glmReverseWinding}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmReverseWinding()}{glmReverseWinding()}}
+{\footnotesize\ttfamily GLvoid glm\+Reverse\+Winding (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_a60b5b5132bb5f88a07f6efe591e83248}\label{glm_8c_a60b5b5132bb5f88a07f6efe591e83248}} 
+\index{glm.c@{glm.c}!glmScale@{glmScale}}
+\index{glmScale@{glmScale}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmScale()}{glmScale()}}
+{\footnotesize\ttfamily GLvoid glm\+Scale (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model,  }\item[{GLfloat}]{scale }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_ab9f677c963577126280616bca555469f}\label{glm_8c_ab9f677c963577126280616bca555469f}} 
+\index{glm.c@{glm.c}!glmSpheremapTexture@{glmSpheremapTexture}}
+\index{glmSpheremapTexture@{glmSpheremapTexture}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmSpheremapTexture()}{glmSpheremapTexture()}}
+{\footnotesize\ttfamily GLvoid glm\+Spheremap\+Texture (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_a4774d9eb47e48064a79d22fd0c1d90b9}\label{glm_8c_a4774d9eb47e48064a79d22fd0c1d90b9}} 
+\index{glm.c@{glm.c}!glmUnitize@{glmUnitize}}
+\index{glmUnitize@{glmUnitize}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmUnitize()}{glmUnitize()}}
+{\footnotesize\ttfamily GLfloat glm\+Unitize (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_a52e9a1a90f7ce16dc852210f39ab481e}\label{glm_8c_a52e9a1a90f7ce16dc852210f39ab481e}} 
+\index{glm.c@{glm.c}!glmVertexNormals@{glmVertexNormals}}
+\index{glmVertexNormals@{glmVertexNormals}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmVertexNormals()}{glmVertexNormals()}}
+{\footnotesize\ttfamily GLvoid glm\+Vertex\+Normals (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model,  }\item[{GLfloat}]{angle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_a66b70d9ab30b141febed9731f3086542}\label{glm_8c_a66b70d9ab30b141febed9731f3086542}} 
+\index{glm.c@{glm.c}!glmWeld@{glmWeld}}
+\index{glmWeld@{glmWeld}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmWeld()}{glmWeld()}}
+{\footnotesize\ttfamily GLvoid glm\+Weld (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model,  }\item[{GLfloat}]{epsilon }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_a2e06f9b1b02d5f63a62ac1892afdb7d2}\label{glm_8c_a2e06f9b1b02d5f63a62ac1892afdb7d2}} 
+\index{glm.c@{glm.c}!glmWeldVectors@{glmWeldVectors}}
+\index{glmWeldVectors@{glmWeldVectors}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmWeldVectors()}{glmWeldVectors()}}
+{\footnotesize\ttfamily GLfloat$\ast$ glm\+Weld\+Vectors (\begin{DoxyParamCaption}\item[{GLfloat $\ast$}]{vectors,  }\item[{GLuint $\ast$}]{numvectors,  }\item[{GLfloat}]{epsilon }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glm_8c_ac7345f822782a8b3e3e18f2957c6395d}\label{glm_8c_ac7345f822782a8b3e3e18f2957c6395d}} 
+\index{glm.c@{glm.c}!glmWriteOBJ@{glmWriteOBJ}}
+\index{glmWriteOBJ@{glmWriteOBJ}!glm.c@{glm.c}}
+\doxysubsubsection{\texorpdfstring{glmWriteOBJ()}{glmWriteOBJ()}}
+{\footnotesize\ttfamily GLvoid glm\+Write\+OBJ (\begin{DoxyParamCaption}\item[{GLMmodel $\ast$}]{model,  }\item[{char $\ast$}]{filename,  }\item[{GLuint}]{mode }\end{DoxyParamCaption})}
+
