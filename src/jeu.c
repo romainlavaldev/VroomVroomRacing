@@ -33,7 +33,7 @@ void enterGame(){
     gameOver = 0;
     GamePlaying = 2; //Jeu en cours
 
-    //Linkage de gestion du clavier
+    //Linkage des fonctions de gestion du clavier
     glutSpecialFunc(jeuSpecialKey);
     glutSpecialUpFunc(jeuSpecialKeyUp);
     glutKeyboardFunc(jeuAsciiKey);

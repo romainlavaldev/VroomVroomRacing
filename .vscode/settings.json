@@ -9,6 +9,7 @@
         "vvr.h": "c",
         "commun.h": "c",
         "soundsystem.h": "c",
-        "windows.h": "c"
+        "windows.h": "c",
+        "jeu.h": "c"
     }
 }

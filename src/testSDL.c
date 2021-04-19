@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 
 
     // Title
-    SDL_WM_SetCaption("Ma super fenêtre SDL !", NULL);
+    //SDL_WM_SetCaption("Ma super fenêtre SDL !", NULL);
  
 
 
