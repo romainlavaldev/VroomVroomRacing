@@ -15,7 +15,7 @@
 </p>
 
 <p class="has-line-data" data-line-start="2" data-line-end="3" align="center">
-  <a href="https://drive.google.com/drive/folders/10Anwy5IvE_B7G__Pnw48i7pDfwT7Q_nL?usp=sharing">
+  <a target="_blank" href="https://drive.google.com/drive/folders/10Anwy5IvE_B7G__Pnw48i7pDfwT7Q_nL?usp=sharing">
     <img src="https://i.ibb.co/xYwb0mh/Webp-net-resizeimage-3.png">
   </a>
 </p>
